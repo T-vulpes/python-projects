@@ -83,11 +83,9 @@ game_over = False
 while not game_over:
     wn.update()
 
-    # Move the ball
     ball.setx(ball.xcor() + ball.dx)
     ball.sety(ball.ycor() + ball.dy)
 
-    # Border collision
     if ball.ycor() > 290:
         ball.sety(290)
         ball.dy *= -1
@@ -108,27 +106,23 @@ while not game_over:
         ball.dx *= -1
         update_score()
 
-    # Paddle collision
     if (350 > ball.xcor() > 340) and (paddle_b.ycor() + 50 > ball.ycor() > paddle_b.ycor() - 50):
         ball.setx(340)
         ball.dx *= -1
-        ball.dx *= 1.2  # Increase speed more noticeably
-        ball.dy *= 1.2  # Increase speed more noticeably
+        ball.dx *= 1.2  
+        ball.dy *= 1.2 
 
     if (-350 < ball.xcor() < -340) and (paddle_a.ycor() + 50 > ball.ycor() > paddle_a.ycor() - 50):
         ball.setx(-340)
         ball.dx *= -1
-        ball.dx *= 1.2  # Increase speed more noticeably
-        ball.dy *= 1.2  # Increase speed more noticeably
+        ball.dx *= 1.2 
+        ball.dy *= 1.2 
 
-    # Update the score and timer every frame
     update_score()
 
-    # End game condition
     if score_a >= 3 or score_b >= 3:
         game_over = True
 
-# Game Over message
 pen.clear()
 pen.write("Game Over", align="center", font=("Courier", 36, "normal"))
 if score_a >= 3:
