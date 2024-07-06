@@ -59,31 +59,26 @@ def paddle_a_down():
         y -= 20
     paddle_a.sety(y)
 
-# Function to move paddle B up
 def paddle_b_up():
     y = paddle_b.ycor()
     if y < 250:
         y += 20
     paddle_b.sety(y)
-
-# Function to move paddle B down
+    
 def paddle_b_down():
     y = paddle_b.ycor()
     if y > -240:
         y -= 20
     paddle_b.sety(y)
 
-# Keyboard bindings
 wn.listen()
 wn.onkeypress(paddle_a_up, "w")
 wn.onkeypress(paddle_a_down, "s")
 wn.onkeypress(paddle_b_up, "Up")
 wn.onkeypress(paddle_b_down, "Down")
 
-# Start time
 start_time = time.time()
 
-# Main game loop
 game_over = False
 while not game_over:
     wn.update()
