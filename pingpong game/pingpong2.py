@@ -15,7 +15,6 @@ paddle_a.shapesize(stretch_wid=6, stretch_len=1)
 paddle_a.penup()
 paddle_a.goto(-350, 0)
 
-# Paddle B
 paddle_b = turtle.Turtle()
 paddle_b.speed(0)
 paddle_b.shape("square")
@@ -24,7 +23,6 @@ paddle_b.shapesize(stretch_wid=6, stretch_len=1)
 paddle_b.penup()
 paddle_b.goto(350, 0)
 
-# Ball
 ball = turtle.Turtle()
 ball.speed(1)
 ball.shape("square")
@@ -34,11 +32,9 @@ ball.goto(0, 0)
 ball.dx = 0.3  
 ball.dy = -0.3  
 
-# Scores
 score_a = 0
 score_b = 0
 
-# Pen to write scores and timer
 pen = turtle.Turtle()
 pen.speed(0)
 pen.color("white")
