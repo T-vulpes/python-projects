@@ -42,20 +42,17 @@ pen.penup()
 pen.hideturtle()
 pen.goto(0, 260)
 
-# Function to update the score
 def update_score():
     pen.clear()
     elapsed_time = int(time.time() - start_time)
     pen.write("Player A: {}  Player B: {}  Time: {}".format(score_a, score_b, elapsed_time), align="center", font=("Courier", 24, "normal"))
 
-# Function to move paddle A up
 def paddle_a_up():
     y = paddle_a.ycor()
     if y < 250:
         y += 20
     paddle_a.sety(y)
 
-# Function to move paddle A down
 def paddle_a_down():
     y = paddle_a.ycor()
     if y > -240:
