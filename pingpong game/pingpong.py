@@ -33,8 +33,8 @@ ball.shape("square")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0)
-ball.dx = 0.3  # Initial speed increased
-ball.dy = -0.3  # Initial speed increased
+ball.dx = 0.3  
+ball.dy = -0.3  
 
 # Scores
 score_a = 0
