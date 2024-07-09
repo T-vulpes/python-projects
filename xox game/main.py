@@ -69,7 +69,7 @@ class TicTacToe:
         line_coords = [
             (50, 10, 50, 290), (150, 10, 150, 290), (250, 10, 250, 290), 
             (10, 50, 290, 50), (10, 150, 290, 150), (10, 250, 290, 250),  
-            (10, 10, 290, 290), (10, 290, 290, 10)  # Diagonal lines
+            (10, 10, 290, 290), (10, 290, 290, 10) 
         ]
         for i, condition in enumerate(self.win_conditions):
             if condition == self.winning_combo:
