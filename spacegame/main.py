@@ -41,14 +41,12 @@ bulletX_change = 0
 bulletY_change = 10
 bullet_state = "ready"  
 
-# Score
 score_value = 0
 font = pygame.font.Font('freesansbold.ttf', 32)
 
 textX = 10
 textY = 10
 
-# Game Over
 over_font = pygame.font.Font('freesansbold.ttf', 64)
 win_font = pygame.font.Font('freesansbold.ttf', 64)
 
@@ -61,7 +59,7 @@ def game_over_text():
     screen.blit(over_text, (200, 250))
 
 def win_text():
-    win_text = win_font.render("KAZANDIN", True, (255, 255, 255))
+    win_text = win_font.render("YOU WON!", True, (255, 255, 255))
     screen.blit(win_text, (250, 250))
 
 def player(x, y):
