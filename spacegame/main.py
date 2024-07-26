@@ -18,7 +18,6 @@ playerX = 370
 playerY = 480
 playerX_change = 0
 
-# Enemy
 enemyImg = []
 enemyX = []
 enemyY = []
@@ -28,20 +27,19 @@ num_of_enemies = 20
 
 for i in range(num_of_enemies):
     enemyImg.append(pygame.image.load('enemy.png'))
-    enemyImg[i] = pygame.transform.scale(enemyImg[i], (60, 60))  # Resim boyutunu ayarlayın
+    enemyImg[i] = pygame.transform.scale(enemyImg[i], (60, 60))  
     enemyX.append(random.randint(0, 736))
     enemyY.append(random.randint(50, 150))
-    enemyX_change.append(2)  # Düşmanların hızını ayarlayın
+    enemyX_change.append(2)  
     enemyY_change.append(40)
 
-# Bullet
 bulletImg = pygame.image.load('bullet.png')
-bulletImg = pygame.transform.scale(bulletImg, (32, 32))  # Resim boyutunu ayarlayın
+bulletImg = pygame.transform.scale(bulletImg, (32, 32)) 
 bulletX = 0
 bulletY = 480
 bulletX_change = 0
 bulletY_change = 10
-bullet_state = "ready"  # "ready" - you can't see the bullet, "fire" - the bullet is moving
+bullet_state = "ready"  
 
 # Score
 score_value = 0
