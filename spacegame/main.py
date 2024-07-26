@@ -77,7 +77,6 @@ def is_collision(enemyX, enemyY, bulletX, bulletY):
     distance = math.sqrt(math.pow(enemyX - bulletX, 2) + math.pow(enemyY - bulletY, 2))
     return distance < 27
 
-# Game Loop
 running = True
 clock = pygame.time.Clock()  # Hız kontrolü için saat ekleyin
 
@@ -85,14 +84,12 @@ while running:
 
     # RGB = Red, Green, Blue
     screen.fill((0, 0, 0))
-    # Background Image
     screen.blit(background, (0, 0))
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
 
-        # If keystroke is pressed check whether its right or left
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
                 playerX_change = -5
@@ -107,18 +104,15 @@ while running:
             if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
                 playerX_change = 0
 
-    # Checking for boundaries of spaceship so it doesn't go out of bounds
     playerX += playerX_change
     if playerX <= 0:
         playerX = 0
     elif playerX >= 736:
         playerX = 736
 
-    # Enemy Movement
     all_enemies_defeated = True
     for i in range(num_of_enemies):
 
-        # Game Over
         if enemyY[i] > 440:
             for j in range(num_of_enemies):
                 enemyY[j] = 2000
@@ -134,7 +128,6 @@ while running:
             enemyX_change[i] = -2  
             enemyY[i] += enemyY_change[i]
 
-        # Collision
         collision = is_collision(enemyX[i], enemyY[i], bulletX, bulletY)
         if collision:
             bulletY = 480
