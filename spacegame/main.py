@@ -2,23 +2,18 @@ import pygame
 import random
 import math
 
-# Initialize Pygame
 pygame.init()
 
-# Screen dimensions
 screen = pygame.display.set_mode((800, 600))
 
-# Background
 background = pygame.image.load('background.jpg')
 
-# Title and Icon
 pygame.display.set_caption("Space Invaders")
 icon = pygame.image.load('ufo.png')
 pygame.display.set_icon(icon)
 
-# Player
 playerImg = pygame.image.load('player.png')
-playerImg = pygame.transform.scale(playerImg, (100, 100))  # Resim boyutunu ayarlayın
+playerImg = pygame.transform.scale(playerImg, (100, 100)) 
 playerX = 370
 playerY = 480
 playerX_change = 0
