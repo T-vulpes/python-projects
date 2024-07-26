@@ -78,11 +78,11 @@ def is_collision(enemyX, enemyY, bulletX, bulletY):
     return distance < 27
 
 running = True
-clock = pygame.time.Clock()  # Hız kontrolü için saat ekleyin
+clock = pygame.time.Clock()  
 
 while running:
 
-    # RGB = Red, Green, Blue
+    
     screen.fill((0, 0, 0))
     screen.blit(background, (0, 0))
 
