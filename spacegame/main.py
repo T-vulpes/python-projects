@@ -128,10 +128,10 @@ while running:
 
         enemyX[i] += enemyX_change[i]
         if enemyX[i] <= 0:
-            enemyX_change[i] = 2  # Düşmanların hızını ayarlayın
+            enemyX_change[i] = 2  
             enemyY[i] += enemyY_change[i]
         elif enemyX[i] >= 736:
-            enemyX_change[i] = -2  # Düşmanların hızını ayarlayın
+            enemyX_change[i] = -2  
             enemyY[i] += enemyY_change[i]
 
         # Collision
@@ -143,7 +143,7 @@ while running:
             enemyX[i] = random.randint(0, 736)
             enemyY[i] = random.randint(50, 150)
 
-        if enemyY[i] < 2000:  # Düşmanın yenilip yenilmediğini kontrol edin
+        if enemyY[i] < 2000:  
             all_enemies_defeated = False
 
         enemy(enemyX[i], enemyY[i], i)
@@ -165,4 +165,4 @@ while running:
         running = False
 
     pygame.display.update()
-    clock.tick(60)  # Oyun hızını ayarlayın (60 FPS)
+    clock.tick(60)  
