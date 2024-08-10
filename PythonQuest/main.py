@@ -2,7 +2,6 @@ import random
 import string
 import time
 
-# Dil seçimi
 def choose_language():
     print(">>> Which language would you like to play in?")
     print("1. English")
@@ -26,7 +25,6 @@ def welcome_message(lang):
         print(">>> Python becerilerinizi kullanarak şifreleri çözmelisiniz!")
     time.sleep(2)
 
-# Caesar Cipher (Sezar Şifrelemesi)
 def caesar_cipher(text, shift):
     encrypted_text = ""
     for char in text:
@@ -44,7 +42,6 @@ def caesar_cipher(text, shift):
             encrypted_text += char
     return encrypted_text
 
-# İpucu sorma fonksiyonu
 def ask_for_hint(lang, hint):
     if lang == 'en':
         user_input = input(">>> Do you want a hint? (Y/N): ").strip().lower()
@@ -58,7 +55,6 @@ def ask_for_hint(lang, hint):
         else:
             print(">>> O zaman devam edelim!")
 
-# Pes etme ve doğru cevabı gösterme
 def give_up(lang, correct_answer, explanation):
     if lang == 'en':
         user_input = input(">>> Do you want to give up? (Y/N): ").strip().lower()
@@ -74,7 +70,6 @@ def give_up(lang, correct_answer, explanation):
         return True
     return False
 
-# Görev 1 - Kolay Şifre Çözme
 def first_mission(lang):
     if lang == 'en':
         print("\n>>> Mission 1: Easy Code Solving")
@@ -113,7 +108,6 @@ def first_mission(lang):
             print(">>> Maalesef, cevap yanlış. Tekrar deneyin!")
             first_mission(lang)
 
-# Görev 2 - Orta Seviye Şifre Çözme
 def second_mission(lang):
     if lang == 'en':
         print("\n>>> Mission 2: Intermediate Code Solving")
@@ -152,7 +146,6 @@ def second_mission(lang):
             print(">>> Maalesef, cevap yanlış. Tekrar deneyin!")
             second_mission(lang)
 
-# Görev 3 - Zor Şifre Çözme
 def third_mission(lang):
     if lang == 'en':
         print("\n>>> Mission 3: Hard Code Solving")
@@ -191,7 +184,6 @@ def third_mission(lang):
             print(">>> Maalesef, cevap yanlış. Tekrar deneyin!")
             third_mission(lang)
 
-# Görev 4 - Python Kodunda Hata Bulma
 def fourth_mission(lang):
     if lang == 'en':
         print("\n>>> Mission 4: Find the Error in Python Code")
@@ -237,7 +229,6 @@ print("Çarpım:", result)
             print(">>> Maalesef, cevap yanlış. Tekrar deneyin!")
             fourth_mission(lang)
 
-# Görev 5 - Python Kodunda Hata Bulma
 def fifth_mission(lang):
     if lang == 'en':
         print("\n>>> Mission 5: Find the Error in Python Code")
@@ -281,7 +272,6 @@ greet_user("Python")
             print(">>> Maalesef, cevap yanlış. Tekrar deneyin!")
             fifth_mission(lang)
 
-# Ana Oyun Fonksiyonu
 def play_game():
     lang = choose_language()
     welcome_message(lang)
@@ -297,5 +287,4 @@ def play_game():
     else:
         print(">>> Tebrikler! Tüm görevleri tamamladınız!")
 
-# Oyunu başlat
 play_game()
