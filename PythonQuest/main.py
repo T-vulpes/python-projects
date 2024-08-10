@@ -15,7 +15,6 @@ def choose_language():
         print(">>> Invalid selection. Defaulting to Turkish.")
         return 'tr'
 
-# Karşılama mesajı
 def welcome_message(lang):
     if lang == 'en':
         print(">>> Welcome to Python Hacker's Quest!")
