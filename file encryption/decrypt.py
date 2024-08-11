@@ -47,7 +47,7 @@ def brute_force_worker(file_path, chars, length, start_index, end_index, stop_ev
                 f.write(data)
             elapsed_time = time.time() - start_time
             print(f"Password found: {password} in {elapsed_time:.2f} seconds")
-            stop_event.set()  # Başarılı olduğunda tüm diğer threadleri durdur
+            stop_event.set()
             messagebox.showinfo("Success", f"File decrypted and saved as {original_file_path} in {elapsed_time:.2f} seconds")
             return
         except (ValueError, KeyError):
@@ -57,18 +57,17 @@ def brute_force_worker(file_path, chars, length, start_index, end_index, stop_ev
             progress_var.set(f"Tried {i} combinations...")
 
 def brute_force_decrypt(file_path, progress_var):
-    chars = string.digits  # Sadece sayılarla brute-force denemesi yapıyoruz
-    max_password_length = 10  # Şifre uzunluğunu 10'a çıkardık
-    num_threads = 4  # Kaç thread kullanmak istediğinizi belirleyin
+    chars = string.digits 
+    max_password_length = 10  
+    num_threads = 4  
     stop_event = threading.Event()
     
     start_time = time.time()
 
-    # Ortalama süre hesaplama
     total_combinations = sum(len(chars) ** length for length in range(1, max_password_length + 1))
     sample_start = time.time()
     sample_password = ''.join(next(itertools.product(chars, repeat=1)))
-    decrypt_file(file_path, sample_password)  # Şifre doğruluğunu kontrol etmek için örnek şifreyi deniyoruz
+    decrypt_file(file_path, sample_password)  
     sample_duration = time.time() - sample_start
     estimated_time = (sample_duration * total_combinations) / num_threads
 
