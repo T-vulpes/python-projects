@@ -4,11 +4,9 @@ from tkinter import messagebox, filedialog
 from PIL import Image, ImageTk
 import io
 
-# Database setup
 conn = sqlite3.connect('library.db')
 cursor = conn.cursor()
 
-# Create tables
 cursor.execute('''CREATE TABLE IF NOT EXISTS users (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     username TEXT UNIQUE NOT NULL,
