@@ -72,10 +72,10 @@ class LibraryApp:
 
         if user:
             self.clear_screen()
-            self.is_admin = user[3] == 1  # Kullanıcının admin olup olmadığını kontrol et
-            if self.is_admin:  # Admin
+            self.is_admin = user[3] == 1 
+            if self.is_admin: 
                 self.admin_dashboard()
-            else:  # Normal kullanıcı
+            else: 
                 self.user_dashboard()
         else:
             messagebox.showerror("Error", "Invalid username or password")
