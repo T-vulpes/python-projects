@@ -265,7 +265,6 @@ class LibraryApp:
         self.clear_screen()
         self.__init__(self.root)
 
-# Start the application
 root = tk.Tk()
 app = LibraryApp(root)
 root.mainloop()
