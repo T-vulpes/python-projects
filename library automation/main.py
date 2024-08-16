@@ -20,24 +20,20 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS books (
                     year INTEGER NOT NULL,
                     image BLOB)''')
 
-# Admin credentials
 cursor.execute("INSERT OR IGNORE INTO users (username, password, is_admin) VALUES ('admin', 'admin123', 1)")
 
 conn.commit()
 
-# Main application
 class LibraryApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Library Management System")
         self.root.configure(bg='#2C3E50')
-        self.is_admin = False  # Admin kontrolü için değişken
+        self.is_admin = False 
 
-        # Welcome Label
         self.welcome_label = tk.Label(root, text="Welcome to the Library", font=("Helvetica", 16, "bold"), fg="#ECF0F1", bg="#2C3E50")
         self.welcome_label.pack(pady=20)
 
-        # Buttons
         self.login_button = tk.Button(root, text="Login", command=self.login, font=("Helvetica", 12), bg="#1ABC9C", fg="#ECF0F1")
         self.login_button.pack(pady=10)
         
