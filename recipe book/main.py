@@ -160,7 +160,7 @@ class RecipeApp:
             return
 
         self.favorites.append(item_text)
-        self.save_favorites()  # Save favorites to file
+        self.save_favorites() 
         messagebox.showinfo("Success", "Recipe added to favorites.")
 
     def show_favorites(self):
