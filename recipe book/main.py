@@ -24,7 +24,6 @@ class RecipeApp:
         self.recipe_listbox.grid(row=1, column=0, columnspan=2, pady=10)
         self.recipe_listbox.bind('<Double-1>', self.show_recipe_details)  # Bind double click to show recipe details
 
-        # Buttons with colors
         self.add_button = tk.Button(self.frame, text="Add Recipe", command=self.add_recipe, bg="lightgreen", fg="black")
         self.add_button.grid(row=2, column=0, padx=5, pady=5)
 
@@ -40,11 +39,10 @@ class RecipeApp:
         self.show_favs_button = tk.Button(self.frame, text="Show Favorites", command=self.show_favorites, bg="lightblue", fg="black")
         self.show_favs_button.grid(row=4, column=0, padx=5, pady=5)
 
-        # Filter button
         self.filter_button = tk.Button(self.frame, text="Filter", command=self.filter_recipes, bg="lightgray", fg="black")
         self.filter_button.grid(row=0, column=2, padx=5)
 
-        self.load_to_listbox()  # Load recipes into the listbox
+        self.load_to_listbox() 
 
     def load_recipes(self):
         try:
