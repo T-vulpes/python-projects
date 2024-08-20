@@ -120,7 +120,6 @@ class RecipeApp:
             messagebox.showerror("Error", "Recipe details cannot be empty.")
             return
 
-        # Remove the old recipe and add the new one
         self.recipes[category] = [recipe for recipe in self.recipes[category] if recipe["name"] != name]
         self.recipes[category].append({"name": new_name, "ingredients": new_ingredients, "details": new_details})
 
