@@ -7,21 +7,19 @@ class RecipeApp:
         self.root = root
         self.root.title("Recipe Book App")
 
-        self.recipes = self.load_recipes()  # Load recipes from file
-        self.favorites = self.load_favorites()  # Load favorites from file
+        self.recipes = self.load_recipes()  
+        self.favorites = self.load_favorites()  
 
-        # Main frame
+       
         self.frame = tk.Frame(self.root)
         self.frame.pack(pady=20)
 
-        # Category selection
         self.category_label = tk.Label(self.frame, text="Select Category:")
         self.category_label.grid(row=0, column=0, padx=5)
         self.category_var = tk.StringVar(value="All Categories")
         self.category_menu = tk.OptionMenu(self.frame, self.category_var, "All Categories", "Dessert", "Main Course", "Salad")
         self.category_menu.grid(row=0, column=1, padx=5)
 
-        # Recipe listbox
         self.recipe_listbox = tk.Listbox(self.frame, width=40, height=15, bg="lightyellow", fg="black", selectbackground="lightblue")
         self.recipe_listbox.grid(row=1, column=0, columnspan=2, pady=10)
         self.recipe_listbox.bind('<Double-1>', self.show_recipe_details)  # Bind double click to show recipe details
