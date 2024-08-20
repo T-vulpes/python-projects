@@ -22,7 +22,7 @@ class RecipeApp:
 
         self.recipe_listbox = tk.Listbox(self.frame, width=40, height=15, bg="lightyellow", fg="black", selectbackground="lightblue")
         self.recipe_listbox.grid(row=1, column=0, columnspan=2, pady=10)
-        self.recipe_listbox.bind('<Double-1>', self.show_recipe_details)  # Bind double click to show recipe details
+        self.recipe_listbox.bind('<Double-1>', self.show_recipe_details) 
 
         self.add_button = tk.Button(self.frame, text="Add Recipe", command=self.add_recipe, bg="lightgreen", fg="black")
         self.add_button.grid(row=2, column=0, padx=5, pady=5)
