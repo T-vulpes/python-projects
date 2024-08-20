@@ -92,7 +92,7 @@ class RecipeApp:
 
         self.recipes[category].append({"name": name, "ingredients": ingredients, "details": details})
         self.recipe_listbox.insert(tk.END, f"{name} ({category})")
-        self.save_recipes()  # Save recipes to file
+        self.save_recipes()  
         messagebox.showinfo("Success", "Recipe added successfully.")
 
     def edit_recipe(self):
@@ -125,7 +125,7 @@ class RecipeApp:
 
         self.recipe_listbox.delete(selected)
         self.recipe_listbox.insert(selected, f"{new_name} ({category})")
-        self.save_recipes()  # Save recipes to file
+        self.save_recipes() 
         messagebox.showinfo("Success", "Recipe edited successfully.")
 
     def delete_recipe(self):
@@ -145,7 +145,7 @@ class RecipeApp:
                 del self.recipes[category]
 
             self.recipe_listbox.delete(selected)
-            self.save_recipes()  # Save recipes to file
+            self.save_recipes()  
             messagebox.showinfo("Success", "Recipe deleted successfully.")
 
     def add_to_favorites(self):
