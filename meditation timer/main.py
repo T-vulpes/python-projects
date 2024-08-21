@@ -10,17 +10,14 @@ class MeditationTimerApp:
 
         mixer.init()
 
-        # Timer Label
         self.timer_label = tk.Label(root, text="00:00", font=("Helvetica", 48), bg="#E0F7FA")
         self.timer_label.pack(pady=20)
 
-        # Meditation Duration Input
         self.duration_label = tk.Label(root, text="Enter Meditation Duration (seconds):", bg="#E0F7FA")
         self.duration_label.pack(pady=10)
         self.duration_entry = tk.Entry(root, width=10)
         self.duration_entry.pack(pady=5)
 
-        # Predefined Plans
         self.plan_label = tk.Label(root, text="Or Choose a Meditation Plan:", bg="#E0F7FA")
         self.plan_label.pack(pady=10)
 
@@ -28,13 +25,11 @@ class MeditationTimerApp:
         self.plan_dropdown = tk.OptionMenu(root, self.plan_var, "Beginner (2 mins)", "Intermediate (5 mins)", "Advanced (10 mins)", command=self.select_plan)
         self.plan_dropdown.pack(pady=5)
 
-        # Meditation Guide Text
         self.guide_text = tk.Text(root, height=10, width=50, wrap="word", bg="#B2EBF2")
         self.guide_text.pack(pady=10)
         self.guide_text.insert(tk.END, "Select a plan to see meditation instructions...")
         self.guide_text.config(state=tk.DISABLED)
 
-        # Buttons
         self.start_button = tk.Button(root, text="Start Meditation", command=self.start_meditation, bg="#81C784", fg="black")
         self.start_button.pack(pady=5)
 
