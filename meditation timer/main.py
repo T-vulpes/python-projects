@@ -102,8 +102,8 @@ class MeditationTimerApp:
         self.remaining_seconds = duration
         self.is_running = True
         self.progress_label.config(text="Meditation in Progress...")
-        mixer.music.load("meditation_sound.mp3")  # Load the music here
-        mixer.music.play(-1)  # Start the music on a loop
+        mixer.music.load("meditation_sound.mp3") 
+        mixer.music.play(-1) 
         self.update_timer()
 
     def stop_meditation(self):
