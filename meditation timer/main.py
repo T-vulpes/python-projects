@@ -6,7 +6,7 @@ class MeditationTimerApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Meditation Timer App")
-        self.root.configure(bg="#E0F7FA")  # Light blue color
+        self.root.configure(bg="#E0F7FA")  
 
         mixer.init()
 
