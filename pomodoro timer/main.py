@@ -53,7 +53,7 @@ class PomodoroTimer:
         self.is_running = False
 
     def load_clock_image(self):
-        clock_image = Image.open("clock.png")  # Replace with the path to your clock image
+        clock_image = Image.open("clock.png")  
         clock_image = clock_image.resize((150, 150), Image.Resampling.LANCZOS)
         self.clock_img = ImageTk.PhotoImage(clock_image)
         self.clock_label = tk.Label(self.root, image=self.clock_img, bg="#e6e6fa")
@@ -79,7 +79,7 @@ class PomodoroTimer:
                 self.timer_finished()
 
     def timer_finished(self):
-        winsound.PlaySound("SystemExclamation", winsound.SND_ALIAS)  # Play a system sound when the timer finishes
+        winsound.PlaySound("SystemExclamation", winsound.SND_ALIAS) 
         if self.is_working:
             messagebox.showinfo("Time's up!", "Take a break!")
             self.current_time = self.break_time
