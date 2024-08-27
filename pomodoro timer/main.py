@@ -3,7 +3,6 @@ from tkinter import messagebox
 from PIL import Image, ImageTk
 import winsound
 
-# Pomodoro Timer class
 class PomodoroTimer:
     def __init__(self, root):
         self.root = root
@@ -11,27 +10,22 @@ class PomodoroTimer:
         self.root.geometry("400x500")
         self.root.configure(bg="#e6e6fa")
 
-        # Set up the timer variables
         self.work_time = 25 * 60  # 25 minutes
         self.break_time = 5 * 60  # 5 minutes
         self.current_time = self.work_time
         self.is_working = True
 
-        # Load and display the clock image
         self.load_clock_image()
 
-        # Timer label
         self.timer_label = tk.Label(root, text=self.format_time(self.current_time), font=("Helvetica", 24))
         self.timer_label.place(relx=0.5, rely=0.35, anchor="center")
 
-        # Control buttons
         self.start_button = tk.Button(root, text="Start", command=self.start_timer, bg="#90ee90", font=("Helvetica", 14))
         self.start_button.place(relx=0.5, rely=0.55, anchor="center")
 
         self.reset_button = tk.Button(root, text="Reset", command=self.reset_timer, bg="#ff6f61", font=("Helvetica", 14))
         self.reset_button.place(relx=0.5, rely=0.65, anchor="center")
 
-        # Work and Break duration adjustment
         self.work_duration_label = tk.Label(root, text="Work Duration", bg="#e6e6fa", font=("Helvetica", 12))
         self.work_duration_label.place(relx=0.3, rely=0.8, anchor="center")
 
