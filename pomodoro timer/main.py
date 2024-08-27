@@ -10,8 +10,8 @@ class PomodoroTimer:
         self.root.geometry("400x500")
         self.root.configure(bg="#e6e6fa")
 
-        self.work_time = 25 * 60  # 25 minutes
-        self.break_time = 5 * 60  # 5 minutes
+        self.work_time = 25 * 60  
+        self.break_time = 5 * 60  
         self.current_time = self.work_time
         self.is_working = True
 
