@@ -126,7 +126,6 @@ class PomodoroTimer:
                 self.current_time = self.break_time
                 self.timer_label.config(text=self.format_time(self.current_time))
 
-# Create the main window and run the application
 root = tk.Tk()
 app = PomodoroTimer(root)
 root.mainloop()
