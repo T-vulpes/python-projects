@@ -44,7 +44,6 @@ class SpeedTypingTest:
         self.text_display.pack(side=tk.LEFT, padx=10)
         self.text_display.config(state=tk.DISABLED)
 
-        # Typing area
         self.text_area = tk.Text(self.frame, height=4, width=50, font=("Helvetica", 14), wrap="word", bg="#ede7f6", fg="#4527a0")
         self.text_area.pack(side=tk.RIGHT, padx=10)
         self.text_area.bind("<Return>", self.check_typing)
