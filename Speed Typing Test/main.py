@@ -73,7 +73,7 @@ class SpeedTypingTest:
             self.text_display.delete(1.0, tk.END)
             self.text_display.insert(tk.END, self.sentence)
             self.text_display.config(state=tk.DISABLED)
-            self.text_area.delete(1.0, tk.END)  # Clear the typing area
+            self.text_area.delete(1.0, tk.END)  
             self.start_button.config(state=tk.DISABLED)
             self.reset_button.config(state=tk.NORMAL)
             self.text_area.focus()
@@ -84,12 +84,12 @@ class SpeedTypingTest:
         typed_text = self.text_area.get(1.0, tk.END).strip()
 
         if not typed_text:
-            return  # If the user didn't type anything, return
+            return 
 
         if typed_text == self.sentence:
             self.correct_count += 1
             self.sentence_index += 1
-            self.show_sentence()  # Move to the next sentence
+            self.show_sentence() 
         else:
             self.text_display.config(state=tk.NORMAL)
             self.text_display.delete(1.0, tk.END)
