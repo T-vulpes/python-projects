@@ -5,7 +5,7 @@ class SpeedTypingTest:
     def __init__(self, root):
         self.root = root
         self.root.title("Speed Typing Test")
-        self.root.configure(bg="#d1c4e9")  # Background color
+        self.root.configure(bg="#d1c4e9")  
 
         self.sentences = [
             "Cultural diversity enriches society.",
@@ -34,15 +34,12 @@ class SpeedTypingTest:
         self.sentence_index = 0
         self.correct_count = 0
 
-        # Main label
         self.label = tk.Label(root, text="Welcome to the Speed Typing Test!", font=("Helvetica", 16), bg="#d1c4e9", fg="#5e35b1")
         self.label.pack(pady=10)
 
-        # Frame for the text and typing area
         self.frame = tk.Frame(root, bg="#d1c4e9")
         self.frame.pack(pady=10)
 
-        # Display area for the sentence
         self.text_display = tk.Text(self.frame, height=4, width=50, font=("Helvetica", 14), wrap="word", bg="#ede7f6", fg="#4527a0")
         self.text_display.pack(side=tk.LEFT, padx=10)
         self.text_display.config(state=tk.DISABLED)
