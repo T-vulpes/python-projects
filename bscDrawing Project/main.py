@@ -88,11 +88,9 @@ def toggle_drawing():
     else:
         t.penup()
 
-# Function to clear the screen
 def clear_screen():
     t.clear()
 
-# Function to move to a new area without erasing
 def move_to_new_area():
     t.penup()
     x = int(entry_x.get())
@@ -100,9 +98,7 @@ def move_to_new_area():
     t.goto(x, y)
     t.pendown()
 
-# Function to save the drawing as a PNG file
 def save_drawing():
-    # Get the screen coordinates and save the drawing as a PNG file
     canvas = screen.getcanvas()
     canvas.update()
     x = screen.window_width() // 2
