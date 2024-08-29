@@ -123,18 +123,15 @@ draw_button.pack()
 clear_button = Button(root, text="Clear Screen", command=clear_screen, bg="lightcoral")
 clear_button.pack()
 
-# Shape selection
 shape_var = StringVar(root)
 shape_var.set('Circle')
 shapes = ['Circle', 'Square', 'Triangle', 'Hexagon', 'Star', 'Flower', 'Heart', 'Arrow', 'Diamond', 'Butterfly']
 shape_menu = OptionMenu(root, shape_var, *shapes)
 shape_menu.pack()
 
-# Draw shape button
 shape_button = Button(root, text="Draw Shape", command=lambda: draw_shape(shape_var.get()), bg="lightyellow")
 shape_button.pack()
 
-# Move to a new area
 Label(root, text="Move to new area (x, y):").pack()
 entry_x = Entry(root)
 entry_y = Entry(root)
@@ -144,9 +141,7 @@ entry_y.pack()
 move_button = Button(root, text="Move", command=move_to_new_area, bg="lightpink")
 move_button.pack()
 
-# Save drawing button
 save_button = Button(root, text="Save Drawing", command=save_drawing, bg="lightgray")
 save_button.pack()
 
-# Start drawing
 root.mainloop()
