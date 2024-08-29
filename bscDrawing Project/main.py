@@ -106,26 +106,20 @@ def save_drawing():
     ImageGrab.grab(bbox=(canvas.winfo_rootx(), canvas.winfo_rooty(), canvas.winfo_rootx() + x * 2, canvas.winfo_rooty() + y * 2)).save("turtle_drawing.png")
     print("Drawing saved as 'turtle_drawing.png'.")
 
-# Function to draw with mouse
 def draw_with_mouse(x, y):
     t.goto(x - screen.window_width()//2, screen.window_height()//2 - y)
 
-# Bind mouse motion to draw_with_mouse
 screen.getcanvas().bind("<B1-Motion>", lambda event: draw_with_mouse(event.x, event.y))
 
-# Tkinter interface
 root = Tk()
 root.title("Drawing Interface")
 
-# Brush color button
 color_button = Button(root, text="Select Brush Color", command=set_brush_color, bg="lightblue")
 color_button.pack()
 
-# Toggle drawing button
 draw_button = Button(root, text="Toggle Drawing", command=toggle_drawing, bg="lightgreen")
 draw_button.pack()
 
-# Clear screen button
 clear_button = Button(root, text="Clear Screen", command=clear_screen, bg="lightcoral")
 clear_button.pack()
 
