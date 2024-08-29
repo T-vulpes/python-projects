@@ -18,9 +18,7 @@ t.speed(0)
 t.shape("circle")
 drawing = False
 
-# Function to draw different shapes
 def draw_shape(shape_name):
-    # Move to a random position before drawing
     t.penup()
     x = random.randint(-200, 200)
     y = random.randint(-200, 200)
@@ -77,13 +75,11 @@ def draw_shape(shape_name):
             t.circle(50, 180)
             t.circle(10, 180)
 
-# Function to set brush color
 def set_brush_color():
-    color = askcolor()[1]  # Opens color picker
+    color = askcolor()[1]  
     if color:
         t.color(color)
 
-# Function to toggle drawing mode
 def toggle_drawing():
     global drawing
     drawing = not drawing
