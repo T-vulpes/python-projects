@@ -3,9 +3,8 @@ import turtle
 from tkinter import *
 from tkinter.colorchooser import askcolor
 from PIL import ImageGrab
-import random  # Bu satırı ekleyin
+import random  
 
-# Turtle setup
 screen = turtle.Screen()
 screen.title("Drawing Project")
 screen.bgcolor("white")
@@ -13,7 +12,6 @@ screen.bgcolor("white")
 t = turtle.Turtle()
 t.speed(3)
 
-# Brush settings
 t.penup()
 t.pensize(3)
 t.speed(0)
