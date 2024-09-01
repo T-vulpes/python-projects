@@ -44,15 +44,12 @@ buttons = [
     ('0', 5, 0, '#cce7ff', lambda: on_button_click('0')), ('.', 5, 1, '#cce7ff', lambda: on_button_click('.')), ('Del', 5, 2, '#ffcccb', on_delete), ('=', 5, 3, '#ffeb99', on_equals),
 ]
 
-# Creating and placing the buttons
 for (text, row, col, color, action) in buttons:
     tk.Button(root, text=text, width=5, height=2, bg=color, fg="black", font=('Arial', 18), command=action).grid(row=row, column=col, sticky="nsew")
 
-# Proportional layout
 for i in range(6):
     root.grid_rowconfigure(i, weight=1)
 for i in range(4):
     root.grid_columnconfigure(i, weight=1)
 
-# Run the window
 root.mainloop()
