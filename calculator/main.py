@@ -30,15 +30,12 @@ def on_negate():
     else:
         entry.insert(0, '-')
 
-# Main window setup
 root = tk.Tk()
 root.title("Calculator")
 
-# Entry area
 entry = tk.Entry(root, font=('Arial', 40), borderwidth=0, relief="solid", justify='right', bg="#3c3c3c", fg="white", highlightthickness=0)
 entry.grid(row=0, column=0, columnspan=4, sticky="nsew")
 
-# Buttons with enhanced colors
 buttons = [
     ('AC', 1, 0, '#ffcccb', on_clear), ('+/-', 1, 1, '#ffcccb', on_negate), ('%', 1, 2, '#ffcccb', lambda: on_button_click('%')), ('/', 1, 3, '#ffeb99', lambda: on_button_click('/')),
     ('7', 2, 0, '#cce7ff', lambda: on_button_click('7')), ('8', 2, 1, '#cce7ff', lambda: on_button_click('8')), ('9', 2, 2, '#cce7ff', lambda: on_button_click('9')), ('*', 2, 3, '#ffeb99', lambda: on_button_click('*')),
