@@ -1,168 +1,61 @@
-import os
-import turtle
-from tkinter import *
-from tkinter.colorchooser import askcolor
-from PIL import ImageGrab
-import random  # Bu satırı ekleyin
+import tkinter as tk
 
-# Turtle setup
-screen = turtle.Screen()
-screen.title("Drawing Project")
-screen.bgcolor("white")
-
-t = turtle.Turtle()
-t.speed(3)
-
-# Brush settings
-t.penup()
-t.pensize(3)
-t.speed(0)
-t.shape("circle")
-drawing = False
-
-# Function to draw different shapes
-def draw_shape(shape_name):
-    # Move to a random position before drawing
-    t.penup()
-    x = random.randint(-200, 200)
-    y = random.randint(-200, 200)
-    t.goto(x, y)
-    t.pendown()
-
-    if shape_name == 'Circle':
-        t.circle(100)
-    elif shape_name == 'Square':
-        for _ in range(4):
-            t.forward(200)
-            t.right(90)
-    elif shape_name == 'Triangle':
-        for _ in range(3):
-            t.forward(200)
-            t.right(120)
-    elif shape_name == 'Hexagon':
-        for _ in range(6):
-            t.forward(100)
-            t.right(60)
-    elif shape_name == 'Star':
-        for _ in range(5):
-            t.forward(200)
-            t.right(144)
-    elif shape_name == 'Flower':
-        for _ in range(36):
-            t.forward(100)
-            t.right(170)
-    elif shape_name == 'Heart':
-        t.begin_fill()
-        t.left(50)
-        t.forward(133)
-        t.circle(50, 200)
-        t.right(140)
-        t.circle(50, 200)
-        t.forward(133)
-        t.end_fill()
-    elif shape_name == 'Arrow':
-        t.forward(150)
-        t.right(135)
-        t.forward(50)
-        t.right(180)
-        t.forward(50)
-        t.left(90)
-        t.forward(50)
-    elif shape_name == 'Diamond':
-        for _ in range(2):
-            t.forward(100)
-            t.right(60)
-            t.forward(100)
-            t.right(120)
-    elif shape_name == 'Butterfly':
-        for _ in range(2):
-            t.circle(50, 180)
-            t.circle(10, 180)
-
-# Function to set brush color
-def set_brush_color():
-    color = askcolor()[1]  # Opens color picker
-    if color:
-        t.color(color)
-
-# Function to toggle drawing mode
-def toggle_drawing():
-    global drawing
-    drawing = not drawing
-    if drawing:
-        t.pendown()
+def on_button_click(value):
+    current = entry.get()
+    if value in '+-*/%' and current.endswith(('+', '-', '*', '/', '%')):
+        pass
     else:
-        t.penup()
+        entry.insert(tk.END, value)
 
-# Function to clear the screen
-def clear_screen():
-    t.clear()
+def on_clear():
+    entry.delete(0, tk.END)
 
-# Function to move to a new area without erasing
-def move_to_new_area():
-    t.penup()
-    x = int(entry_x.get())
-    y = int(entry_y.get())
-    t.goto(x, y)
-    t.pendown()
+def on_delete():
+    current = entry.get()
+    entry.delete(len(current) - 1)
 
-# Function to save the drawing as a PNG file
-def save_drawing():
-    # Get the screen coordinates and save the drawing as a PNG file
-    canvas = screen.getcanvas()
-    canvas.update()
-    x = screen.window_width() // 2
-    y = screen.window_height() // 2
-    ImageGrab.grab(bbox=(canvas.winfo_rootx(), canvas.winfo_rooty(), canvas.winfo_rootx() + x * 2, canvas.winfo_rooty() + y * 2)).save("turtle_drawing.png")
-    print("Drawing saved as 'turtle_drawing.png'.")
+def on_equals():
+    try:
+        result = eval(entry.get())
+        entry.delete(0, tk.END)
+        entry.insert(0, str(result))
+    except:
+        entry.delete(0, tk.END)
+        entry.insert(0, "Error")
 
-# Function to draw with mouse
-def draw_with_mouse(x, y):
-    t.goto(x - screen.window_width()//2, screen.window_height()//2 - y)
+def on_negate():
+    current = entry.get()
+    if current.startswith('-'):
+        entry.delete(0)
+    else:
+        entry.insert(0, '-')
 
-# Bind mouse motion to draw_with_mouse
-screen.getcanvas().bind("<B1-Motion>", lambda event: draw_with_mouse(event.x, event.y))
+# Main window setup
+root = tk.Tk()
+root.title("Calculator")
 
-# Tkinter interface
-root = Tk()
-root.title("Drawing Interface")
+# Entry area
+entry = tk.Entry(root, font=('Arial', 40), borderwidth=0, relief="solid", justify='right', bg="#3c3c3c", fg="white", highlightthickness=0)
+entry.grid(row=0, column=0, columnspan=4, sticky="nsew")
 
-# Brush color button
-color_button = Button(root, text="Select Brush Color", command=set_brush_color, bg="lightblue")
-color_button.pack()
+# Buttons with enhanced colors
+buttons = [
+    ('AC', 1, 0, '#ffcccb', on_clear), ('+/-', 1, 1, '#ffcccb', on_negate), ('%', 1, 2, '#ffcccb', lambda: on_button_click('%')), ('/', 1, 3, '#ffeb99', lambda: on_button_click('/')),
+    ('7', 2, 0, '#cce7ff', lambda: on_button_click('7')), ('8', 2, 1, '#cce7ff', lambda: on_button_click('8')), ('9', 2, 2, '#cce7ff', lambda: on_button_click('9')), ('*', 2, 3, '#ffeb99', lambda: on_button_click('*')),
+    ('4', 3, 0, '#cce7ff', lambda: on_button_click('4')), ('5', 3, 1, '#cce7ff', lambda: on_button_click('5')), ('6', 3, 2, '#cce7ff', lambda: on_button_click('6')), ('-', 3, 3, '#ffeb99', lambda: on_button_click('-')),
+    ('1', 4, 0, '#cce7ff', lambda: on_button_click('1')), ('2', 4, 1, '#cce7ff', lambda: on_button_click('2')), ('3', 4, 2, '#cce7ff', lambda: on_button_click('3')), ('+', 4, 3, '#ffeb99', lambda: on_button_click('+')),
+    ('0', 5, 0, '#cce7ff', lambda: on_button_click('0')), ('.', 5, 1, '#cce7ff', lambda: on_button_click('.')), ('Del', 5, 2, '#ffcccb', on_delete), ('=', 5, 3, '#ffeb99', on_equals),
+]
 
-# Toggle drawing button
-draw_button = Button(root, text="Toggle Drawing", command=toggle_drawing, bg="lightgreen")
-draw_button.pack()
+# Creating and placing the buttons
+for (text, row, col, color, action) in buttons:
+    tk.Button(root, text=text, width=5, height=2, bg=color, fg="black", font=('Arial', 18), command=action).grid(row=row, column=col, sticky="nsew")
 
-# Clear screen button
-clear_button = Button(root, text="Clear Screen", command=clear_screen, bg="lightcoral")
-clear_button.pack()
+# Proportional layout
+for i in range(6):
+    root.grid_rowconfigure(i, weight=1)
+for i in range(4):
+    root.grid_columnconfigure(i, weight=1)
 
-# Shape selection
-shape_var = StringVar(root)
-shape_var.set('Circle')
-shapes = ['Circle', 'Square', 'Triangle', 'Hexagon', 'Star', 'Flower', 'Heart', 'Arrow', 'Diamond', 'Butterfly']
-shape_menu = OptionMenu(root, shape_var, *shapes)
-shape_menu.pack()
-
-# Draw shape button
-shape_button = Button(root, text="Draw Shape", command=lambda: draw_shape(shape_var.get()), bg="lightyellow")
-shape_button.pack()
-
-# Move to a new area
-Label(root, text="Move to new area (x, y):").pack()
-entry_x = Entry(root)
-entry_y = Entry(root)
-entry_x.pack()
-entry_y.pack()
-
-move_button = Button(root, text="Move", command=move_to_new_area, bg="lightpink")
-move_button.pack()
-
-# Save drawing button
-save_button = Button(root, text="Save Drawing", command=save_drawing, bg="lightgray")
-save_button.pack()
-
-# Start drawing
+# Run the window
 root.mainloop()
