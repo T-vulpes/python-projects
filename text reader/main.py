@@ -7,7 +7,7 @@ pdfokuyucu= PyPDF2.PdfFileReader(hikaye)
 engine=pyttsx3.init()
 voices=engine.getProperty('voices')
 
-engine.setProperty('voice',voices[0].id) #kadın sesi ayarladık
+engine.setProperty('voice',voices[0].id) 
 
 for sayfano in range(0,pdfokuyucu.numPages):
     sayfa=pdfokuyucu.getPage(sayfano)
