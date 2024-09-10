@@ -16,7 +16,7 @@ pencere.setup(700,500)
 ok=turtle.Turtle()
 ok.speed(0)
 
-colors=['red','green','blue','yellow','white','orange','purple','pink','cyan','lime']
+colors=['red','green','blue','yellow','white','orange','purple','pink','cyan','lime','navyblue']
 
 for i in range(10):
     x=random.randint(-300,300)
