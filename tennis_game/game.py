@@ -3,19 +3,15 @@ import random
 
 pygame.init()
 
-# Screen dimensions
 width, height = 800, 600
 sc = pygame.display.set_mode((width, height))
 
-# Background and game over images
 background_img = pygame.image.load("background.jpg")
 gameover_img = pygame.image.load("gameover.jpg")
 
-# Resize images if needed
 background_img = pygame.transform.scale(background_img, (width, height))
 gameover_img = pygame.transform.scale(gameover_img, (width, height))
 
-# Sound effects
 try:
     hit_sound = pygame.mixer.Sound("pointls.wav")
     miss_sound = pygame.mixer.Sound("vo1.wav")
@@ -24,11 +20,9 @@ except FileNotFoundError:
     pygame.quit()
     exit()
 
-# FPS settings
 fps = 30
 time = pygame.time.Clock()
 
-# Score tracking
 score1 = 0
 score2 = 0
 
@@ -112,7 +106,6 @@ class Ball(pygame.sprite.Sprite):
         if self.rect.top <= 0 or self.rect.bottom >= height:
             self.speed_y *= -1
 
-# Player and ball groups
 player1_group = pygame.sprite.Group()
 player1 = Player("1_player.png", 0, height // 2)
 player1_group.add(player1)
@@ -127,7 +120,6 @@ ball_group.add(ball)
 
 game = Game()
 
-# Main loop
 running = True
 while running:
     for event in pygame.event.get():
