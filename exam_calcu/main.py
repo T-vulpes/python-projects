@@ -39,4 +39,4 @@ except ValueError as e:
 except Exception as e:
     print("An unexpected error occurred:", e)
 
-input("Press Enter to exit...")  # Keeps the terminal window open
+input("Press Enter to exit...") 
