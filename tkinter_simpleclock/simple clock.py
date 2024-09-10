@@ -19,10 +19,8 @@ class SimpleClock:
 
         self.canvas.delete("all") 
 
-        # Saat çerçevesini çiz
         self.canvas.create_oval(50, 50, 350, 350, outline='white', width=4)
 
-        # Saat göstergelerini çiz
         for i in range(12):
             angle = math.radians(30 * i - 90)  
             x1 = 200 + 130 * 0.8 * math.cos(angle)
@@ -31,7 +29,6 @@ class SimpleClock:
             y2 = 200 + 130 * 0.9 * math.sin(angle)
             self.canvas.create_line(x1, y1, x2, y2, fill="white", width=3)
 
-        # Saat göstergesini güncelle
         self.canvas.create_text(200, 200, text=current_time, font=('calibri', 20, 'bold'), fill='white')
 
         self.root.after(1000, self.update_clock)
