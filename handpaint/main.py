@@ -97,7 +97,6 @@ with mp_hands.Hands(static_image_mode=False, max_num_hands=1, min_detection_conf
         img = cv2.bitwise_or(img, img_canvas)
 
         cv2.imshow("Image", img)
-        #cv2.imshow("Canvas", img_canvas)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
