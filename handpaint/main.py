@@ -41,7 +41,7 @@ with mp_hands.Hands(static_image_mode=False, max_num_hands=1, min_detection_conf
 
     while True:
         success, img = cap.read()
-        img = cv2.flip(img, 1)  # Aynalama
+        img = cv2.flip(img, 1) 
         img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         results = hands.process(img_rgb)
 
@@ -54,8 +54,8 @@ with mp_hands.Hands(static_image_mode=False, max_num_hands=1, min_detection_conf
                     lm_list.append([id, cx, cy])
                 
                 if lm_list:
-                    x1, y1 = lm_list[8][1:]  # İşaret parmağı
-                    x2, y2 = lm_list[12][1:]  # Orta parmak
+                    x1, y1 = lm_list[8][1:] 
+                    x2, y2 = lm_list[12][1:]  
 
                     tip_ids = [4, 8, 12, 16, 20]
                     fingers = fingers_up(lm_list, tip_ids)
