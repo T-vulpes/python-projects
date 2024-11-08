@@ -59,6 +59,7 @@ with mp_hands.Hands(static_image_mode=False, max_num_hands=1, min_detection_conf
 
                     tip_ids = [4, 8, 12, 16, 20]
                     fingers = fingers_up(lm_list, tip_ids)
+                    
                     if fingers[1] and fingers[2]:
                         if y1 < 125:
                             if 250 < x1 < 450:
@@ -74,6 +75,7 @@ with mp_hands.Hands(static_image_mode=False, max_num_hands=1, min_detection_conf
                                 header = overlay_list[3]
                                 draw_color = (0, 0, 0)
                         cv2.rectangle(img, (x1, y1 - 25), (x2, y2 + 25), draw_color, cv2.FILLED)
+                        
                     elif fingers[1] and not fingers[2]:
                         cv2.circle(img, (x1, y1), 15, draw_color, cv2.FILLED)
                         if xp == 0 and yp == 0:
@@ -99,6 +101,6 @@ with mp_hands.Hands(static_image_mode=False, max_num_hands=1, min_detection_conf
         cv2.imshow("Image", img)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
-
+            
 cap.release()
 cv2.destroyAllWindows()
