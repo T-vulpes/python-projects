@@ -1,3 +1,5 @@
+#Wait a moment for the video to open...
+
 import cv2
 import numpy as np
 import mediapipe as mp
