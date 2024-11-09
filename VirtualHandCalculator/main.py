@@ -68,12 +68,12 @@ while True:
                     button_value = button_values[i % 4][i // 4]
                     if button_value == '=':
                         try:
-                            equation = str(eval(equation))  # Evaluate the equation
+                            equation = str(eval(equation))  
                         except:
-                            equation = "Error"  # Show error on invalid input
+                            equation = "Error"  
                     else:
                         equation += button_value
-                    click_delay_counter = 1  # Start click delay counter
+                    click_delay_counter = 1  
 
     if click_delay_counter > 0:
         click_delay_counter += 1
@@ -81,15 +81,14 @@ while True:
             click_delay_counter = 0
 
     cv2.putText(img, equation, (710, 120), cv2.FONT_HERSHEY_PLAIN, 3, (50, 50, 50), 3)
-
     cv2.imshow('Calculator', img)
 
     key = cv2.waitKey(1)
-    if key == ord('c'):  # Clear the equation on 'c' press
+    if key == ord('c'):  
         equation = ''
-    elif key == ord('t'):  # Clear the equation on 't' press (like a reset button)
+    elif key == ord('t'): 
         equation = ''
-    elif key == 27:  # Exit on 'Esc' press
+    elif key == 27: 
         break
 
 cap.release()
