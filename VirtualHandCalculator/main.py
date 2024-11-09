@@ -58,8 +58,8 @@ while True:
     for button in buttons:
         button.draw(img)
     if hands:
-        lmList = hands[0]['lmList']  # Landmark list for the first detected hand
-        x, y = lmList[8][:2]  # Get only x and y coordinates for index finger tip
+        lmList = hands[0]['lmList']  
+        x, y = lmList[8][:2]  
         length, _, img = detector.findDistance(lmList[8][:2], lmList[12][:2], img)
 
         if length < 50 and click_delay_counter == 0:
