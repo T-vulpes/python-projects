@@ -1,5 +1,5 @@
 #Please wait a moment for the video to open.
-#Press 't' to reset the calculator.
+#Press 'c' or 't' to reset the calculator.
 #press esc to exit calculator
 
 import cv2
