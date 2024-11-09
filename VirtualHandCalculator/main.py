@@ -13,14 +13,12 @@ class Button:
         self.value = value
 
     def draw(self, img):
-        # Draw button rectangle
         cv2.rectangle(img, self.position, 
                       (self.position[0] + self.width, self.position[1] + self.height),
                       (225, 225, 225), cv2.FILLED)
         cv2.rectangle(img, self.position, 
                       (self.position[0] + self.width, self.position[1] + self.height),
                       (50, 50, 50), 3)
-        
         cv2.putText(img, self.value, (self.position[0] + 40, self.position[1] + 60),
                     cv2.FONT_HERSHEY_PLAIN, 2, (50, 50, 50), 2)
 
@@ -51,7 +49,7 @@ click_delay_counter = 0
 
 while True:
     success, img = cap.read()
-    img = cv2.flip(img, 1)  # Flip for a mirrored view
+    img = cv2.flip(img, 1)  
     hands, img = detector.findHands(img, flipType=False)
 
     cv2.rectangle(img, (700, 50), (1100, 150), (225, 225, 225), cv2.FILLED)
@@ -64,7 +62,6 @@ while True:
         x, y = lmList[8][:2]  # Get only x and y coordinates for index finger tip
         length, _, img = detector.findDistance(lmList[8][:2], lmList[12][:2], img)
 
-        # Check if the index finger and middle finger are close to each other (click gesture)
         if length < 50 and click_delay_counter == 0:
             for i, button in enumerate(buttons):
                 if button.check_click(x, y):
@@ -78,19 +75,15 @@ while True:
                         equation += button_value
                     click_delay_counter = 1  # Start click delay counter
 
-    # Reset click delay counter to prevent repeated clicks
     if click_delay_counter > 0:
         click_delay_counter += 1
         if click_delay_counter > 10:
             click_delay_counter = 0
 
-    # Display the current equation
     cv2.putText(img, equation, (710, 120), cv2.FONT_HERSHEY_PLAIN, 3, (50, 50, 50), 3)
 
-    # Show the image
     cv2.imshow('Calculator', img)
 
-    # Keyboard controls
     key = cv2.waitKey(1)
     if key == ord('c'):  # Clear the equation on 'c' press
         equation = ''
@@ -99,6 +92,5 @@ while True:
     elif key == 27:  # Exit on 'Esc' press
         break
 
-# Release resources
 cap.release()
 cv2.destroyAllWindows()
