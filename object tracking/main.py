@@ -9,20 +9,15 @@ while True:
         break
 
     frame = cv2.resize(frame, (0, 0), fx=0.5, fy=0.5)  # Adjust fx and fy to change the scale
-    
     height, width, _ = frame.shape    
-
     roi = frame[100:350, 150:500]  # Adjust coordinates as per the new resized frame
-
     mask = object_detector.apply(roi)
-    
     _, mask = cv2.threshold(mask, 254, 255, cv2.THRESH_BINARY)
-    
     contours, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     
     for cnt in contours:
         area = cv2.contourArea(cnt)
-        if area > 800:  # Adjust this threshold to filter out small contours that are not vehicles
+        if area > 800:  
             x, y, w, h = cv2.boundingRect(cnt)
             cv2.rectangle(roi, (x, y), (x + w, y + h), (0, 255, 0), 2)
             cv2.putText(roi, "Vehicle", (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
