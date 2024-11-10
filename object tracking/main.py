@@ -8,9 +8,9 @@ while True:
     if not ret:
         break
 
-    frame = cv2.resize(frame, (0, 0), fx=0.5, fy=0.5)  # Adjust fx and fy to change the scale
+    frame = cv2.resize(frame, (0, 0), fx=0.5, fy=0.5) 
     height, width, _ = frame.shape    
-    roi = frame[100:350, 150:500]  # Adjust coordinates as per the new resized frame
+    roi = frame[100:350, 150:500] 
     mask = object_detector.apply(roi)
     _, mask = cv2.threshold(mask, 254, 255, cv2.THRESH_BINARY)
     contours, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
