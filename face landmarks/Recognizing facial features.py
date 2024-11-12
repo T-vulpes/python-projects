@@ -22,7 +22,7 @@ with mp_face_mesh.FaceMesh(min_detection_confidence=0.5, min_tracking_confidence
         
         cv2.imshow("Frame", frame)
         key = cv2.waitKey(1)
-        if key == 27:  # ESC tuşuna basınca çık
+        if key == 27: 
             break
 
 cap.release()
