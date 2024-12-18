@@ -15,8 +15,8 @@ def send_message_via_whatsapp(phone_number, message, delay=10):
     pyautogui.write(message)
     pyautogui.press("enter")
 
-phone_number = input("Alıcı telefon numarasını girin (+90 ile başlayarak): ")
-message = input("Gönderilecek mesajı yazın: ")
+phone_number = input("Enter the recipient phone number (starting with +90):")
+message = input("Type the message to send: ")
 
 send_time = input("Enter the time to send the message (in HH:MM format): ")
 send_hour, send_minute = map(int, send_time.split(":"))
