@@ -5,12 +5,10 @@ import datetime
 
 def send_message_via_whatsapp(phone_number, message, delay=10):
     """
-    WhatsApp Desktop uygulamasını açıp, mesaj gönderir.
-    :param phone_number: Gönderilecek telefon numarası (ör. '+905xxxxxxxxx')
-    :param message: Gönderilecek mesaj metni
-    :param delay: WhatsApp açıldıktan sonra bekleme süresi (varsayılan 10 saniye)
+    :param phone_number: Phone number to send (ör. '+905xxxxxxxxx')
+    :param message: Text of message to be sent
+    :param delay: Waiting time after opening WhatsApp (default 10 seconds)
     """
-    # WhatsApp Desktop Uygulamasını Aç
     os.system("start whatsapp://send?phone=" + phone_number)
     time.sleep(delay)  # Uygulamanın açılması ve QR kodun taranması için bekle
 
