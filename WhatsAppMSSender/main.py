@@ -18,7 +18,7 @@ def send_message_via_whatsapp(phone_number, message, delay=10):
 phone_number = input("Alıcı telefon numarasını girin (+90 ile başlayarak): ")
 message = input("Gönderilecek mesajı yazın: ")
 
-send_time = input("Mesajın gönderileceği zamanı girin (HH:MM formatında): ")
+send_time = input("Enter the time to send the message (in HH:MM format): ")
 send_hour, send_minute = map(int, send_time.split(":"))
 
 now = datetime.datetime.now()
@@ -28,7 +28,7 @@ if send_at < now:
     send_at += datetime.timedelta(days=1)
 
 wait_time = (send_at - now).seconds
-print(f"Mesaj gönderimi için {wait_time} saniye bekleniyor...")
+print(f"Waiting for {wait_time} seconds to send message...")
 time.sleep(wait_time)
 
 send_message_via_whatsapp(phone_number, message)
