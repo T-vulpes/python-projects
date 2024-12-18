@@ -1,3 +1,5 @@
+#+90 -  represents Turkey's country code.
+#5xx -  is the mobile carrier code (mobile numbers in Turkey).
 import os
 import time
 import pyautogui
