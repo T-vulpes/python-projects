@@ -31,7 +31,6 @@ def Record():
         countdown_label.config(text="Recording Complete!", fg="#32CD32")
         sound.wait()
 
-        # Kaydedilen dosyayı yaz
         write("recording.wav", freq, recording)
         messagebox.showinfo("Success", "Recording saved as 'recording.wav'")
 
@@ -40,7 +39,6 @@ def Record():
     except Exception as e:
         messagebox.showerror("Error", str(e))
     finally:
-        # Resmi eski haline döndür (record.png)
         myimg.config(image=record_photo)
         root.update()
 
