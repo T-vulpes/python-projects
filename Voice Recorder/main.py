@@ -6,7 +6,6 @@ import sounddevice as sound
 from scipy.io.wavfile import write
 from PIL import Image, ImageTk
 
-# Uygulama ana penceresi
 root = Tk()
 root.geometry("600x700+400+80")
 root.resizable(False, False)
@@ -20,7 +19,6 @@ def Record():
         if dura <= 0:
             raise ValueError("Duration must be a positive integer.")
 
-        # Resmi değiştir (recordClick.png)
         myimg.config(image=record_click_photo)
         root.update()
 
