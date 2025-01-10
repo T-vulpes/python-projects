@@ -44,14 +44,11 @@ def Record():
         myimg.config(image=record_photo)
         root.update()
 
-# Resimleri yeniden boyutlandırma
 record_image = Image.open("record.png").resize((100, 100))
 record_click_image = Image.open("recordClick.png").resize((100, 100))
 
 record_photo = ImageTk.PhotoImage(record_image)
 record_click_photo = ImageTk.PhotoImage(record_click_image)
-
-# Arayüz elemanları
 myimg = Label(image=record_photo, background="#ffffff")
 myimg.pack(padx=5, pady=5)
 
@@ -64,7 +61,6 @@ Label(text="Enter duration in seconds", font="arial 15", background="#ffffff", f
 record_button = Button(text="Record", font="arial 20", bg="#FF6347", fg="#ffffff", border=0, command=Record)
 record_button.pack(pady=30)
 
-# Geri sayım etiketi
 countdown_label = Label(text="", font="arial 20 bold", background="#ffffff", fg="#000000")
 countdown_label.pack(pady=20)
 
