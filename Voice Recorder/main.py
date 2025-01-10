@@ -22,10 +22,7 @@ def Record():
         myimg.config(image=record_click_photo)
         root.update()
 
-        # Kaydı başlat
         recording = sound.rec(dura * freq, samplerate=freq, channels=2)
-
-        # Geri sayımı göster
         for temp in range(dura, 0, -1):
             countdown_label.config(text=f"Recording in {temp}...", fg="#FF4500")
             root.update()
