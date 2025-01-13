@@ -14,7 +14,7 @@ def Openimg():
                                                      ("All files", "*.*"))
                                           )
     img = Image.open(filename)
-    img = img.resize((250, 250))  # Görüntüyü çerçeveye sığdır
+    img = img.resize((250, 250))  
     img = ImageTk.PhotoImage(img)
     lbl.configure(image=img, width=250, height=250)
     lbl.image = img
@@ -54,7 +54,7 @@ root = Tk()
 root.title("Hide a Secret")
 root.geometry("700x500+250+180")
 root.resizable(False, False)
-root.configure(bg="#1e293b")  # Arka plan rengini daha koyu bir mavi tonuna ayarladık
+root.configure(bg="#1e293b")  
 
 image_icon = PhotoImage(file="logo.png")
 root.iconphoto(False, image_icon)
