@@ -42,7 +42,6 @@ def speak_text():
     else:
         messagebox.showwarning("No Text", "There is no corrected text to speak.")
 
-# Tema değiştirme fonksiyonu
 def toggle_theme():
     if root["background"] == "#eef2f7":
         root.config(background="#2c3e50")
