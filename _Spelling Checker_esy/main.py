@@ -53,20 +53,16 @@ def toggle_theme():
         heading.config(bg="#eef2f7", fg="#2c3e50")
         spell_result.config(bg="#eef2f7", fg="#2c3e50")
 
-# Başlık
 heading = tk.Label(
     root, text="Spelling Checker", font=("Poppins", 24, "bold"), bg="#eef2f7", fg="#2c3e50"
 )
 heading.pack(pady=(20, 10))
 
-# Giriş metin alanı
 enter_text = tk.Entry(
     root, width=50, font=("Poppins", 16), bg="white", bd=2, justify="center"
 )
 enter_text.pack(pady=10)
 enter_text.focus()
-
-# Yazım denetimi butonu
 check_button = tk.Button(
     root,
     text="Check Spelling",
@@ -76,8 +72,6 @@ check_button = tk.Button(
     command=check_spelling,
 )
 check_button.pack(pady=10)
-
-# Temizle butonu
 clear_button = tk.Button(
     root,
     text="Clear",
@@ -87,8 +81,6 @@ clear_button = tk.Button(
     command=clear_text,
 )
 clear_button.pack(pady=10)
-
-# Sonucu panoya kopyalama butonu
 copy_button = tk.Button(
     root,
     text="Copy to Clipboard",
@@ -98,8 +90,6 @@ copy_button = tk.Button(
     command=copy_to_clipboard,
 )
 copy_button.pack(pady=10)
-
-# Sonucu sesli okuma butonu
 speak_button = tk.Button(
     root,
     text="Speak Corrected Text",
