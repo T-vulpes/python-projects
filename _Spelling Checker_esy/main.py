@@ -10,7 +10,6 @@ root.geometry("800x800")
 root.config(background="#eef2f7")
 engine = pyttsx3.init()
 
-# Yazım denetimi fonksiyonu
 def check_spelling():
     word = enter_text.get()
     if word.strip():  # Boş giriş kontrolü
@@ -23,12 +22,10 @@ def check_spelling():
     else:
         spell_result.config(text="Please enter some text!", fg="red")
 
-# Giriş alanını temizleme fonksiyonu
 def clear_text():
     enter_text.delete(0, tk.END)
     spell_result.config(text="")
 
-# Sonucu panoya kopyalama fonksiyonu
 def copy_to_clipboard():
     corrected_text = spell_result.cget("text").replace("Corrected Text: ", "")
     if corrected_text.strip():
