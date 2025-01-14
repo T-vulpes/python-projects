@@ -1,0 +1,146 @@
+import tkinter as tk
+from tkinter import messagebox
+from textblob import TextBlob
+import pyperclip
+import pyttsx3
+
+# Ana pencere oluşturma
+root = tk.Tk()
+root.title("Spelling Checker")
+root.geometry("800x800")
+root.config(background="#eef2f7")
+
+# TTS (Text-to-Speech) motoru
+engine = pyttsx3.init()
+
+# Yazım denetimi fonksiyonu
+def check_spelling():
+    word = enter_text.get()
+    if word.strip():  # Boş giriş kontrolü
+        try:
+            corrected_text = TextBlob(word).correct()
+            spell_result.config(text=f"Corrected Text: {corrected_text}", fg="#4caf50")
+            history_list.insert(tk.END, corrected_text)  # Geçmişe ekleme
+        except Exception as e:
+            messagebox.showerror("Error", f"An error occurred: {str(e)}")
+    else:
+        spell_result.config(text="Please enter some text!", fg="red")
+
+# Giriş alanını temizleme fonksiyonu
+def clear_text():
+    enter_text.delete(0, tk.END)
+    spell_result.config(text="")
+
+# Sonucu panoya kopyalama fonksiyonu
+def copy_to_clipboard():
+    corrected_text = spell_result.cget("text").replace("Corrected Text: ", "")
+    if corrected_text.strip():
+        pyperclip.copy(corrected_text)
+        messagebox.showinfo("Copied", "Corrected text copied to clipboard!")
+    else:
+        messagebox.showwarning("No Text", "There is no corrected text to copy.")
+
+# Sesli çıktı fonksiyonu
+def speak_text():
+    corrected_text = spell_result.cget("text").replace("Corrected Text: ", "")
+    if corrected_text.strip():
+        engine.say(corrected_text)
+        engine.runAndWait()
+    else:
+        messagebox.showwarning("No Text", "There is no corrected text to speak.")
+
+# Tema değiştirme fonksiyonu
+def toggle_theme():
+    if root["background"] == "#eef2f7":
+        root.config(background="#2c3e50")
+        heading.config(bg="#2c3e50", fg="#ecf0f1")
+        spell_result.config(bg="#2c3e50", fg="#ecf0f1")
+    else:
+        root.config(background="#eef2f7")
+        heading.config(bg="#eef2f7", fg="#2c3e50")
+        spell_result.config(bg="#eef2f7", fg="#2c3e50")
+
+# Başlık
+heading = tk.Label(
+    root, text="Spelling Checker", font=("Poppins", 24, "bold"), bg="#eef2f7", fg="#2c3e50"
+)
+heading.pack(pady=(20, 10))
+
+# Giriş metin alanı
+enter_text = tk.Entry(
+    root, width=50, font=("Poppins", 16), bg="white", bd=2, justify="center"
+)
+enter_text.pack(pady=10)
+enter_text.focus()
+
+# Yazım denetimi butonu
+check_button = tk.Button(
+    root,
+    text="Check Spelling",
+    font=("Poppins", 14, "bold"),
+    bg="#3498db",
+    fg="white",
+    command=check_spelling,
+)
+check_button.pack(pady=10)
+
+# Temizle butonu
+clear_button = tk.Button(
+    root,
+    text="Clear",
+    font=("Poppins", 14),
+    bg="#e74c3c",
+    fg="white",
+    command=clear_text,
+)
+clear_button.pack(pady=10)
+
+# Sonucu panoya kopyalama butonu
+copy_button = tk.Button(
+    root,
+    text="Copy to Clipboard",
+    font=("Poppins", 14),
+    bg="#2ecc71",
+    fg="white",
+    command=copy_to_clipboard,
+)
+copy_button.pack(pady=10)
+
+# Sonucu sesli okuma butonu
+speak_button = tk.Button(
+    root,
+    text="Speak Corrected Text",
+    font=("Poppins", 14),
+    bg="#9b59b6",
+    fg="white",
+    command=speak_text,
+)
+speak_button.pack(pady=10)
+
+# Tema değiştirme butonu
+theme_button = tk.Button(
+    root,
+    text="Toggle Theme",
+    font=("Poppins", 14),
+    bg="#34495e",
+    fg="white",
+    command=toggle_theme,
+)
+theme_button.pack(pady=10)
+
+# Düzeltme geçmişi listesi
+history_label = tk.Label(
+    root, text="Correction History:", font=("Poppins", 16), bg="#eef2f7", fg="#2c3e50"
+)
+history_label.pack(pady=10)
+history_list = tk.Listbox(root, width=60, height=10, font=("Poppins", 14), bg="white")
+history_list.pack(pady=10)
+
+# Düzeltme sonucunu göstermek için etiket
+spell_result = tk.Label(
+    root, text="", font=("Poppins", 16), bg="#eef2f7", fg="#2c3e50"
+)
+spell_result.pack(pady=20)
+
+# Ana döngü
+root.mainloop()
