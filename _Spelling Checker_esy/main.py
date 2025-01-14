@@ -12,11 +12,11 @@ engine = pyttsx3.init()
 
 def check_spelling():
     word = enter_text.get()
-    if word.strip():  # Boş giriş kontrolü
+    if word.strip():  
         try:
             corrected_text = TextBlob(word).correct()
             spell_result.config(text=f"Corrected Text: {corrected_text}", fg="#4caf50")
-            history_list.insert(tk.END, corrected_text)  # Geçmişe ekleme
+            history_list.insert(tk.END, corrected_text)  
         except Exception as e:
             messagebox.showerror("Error", f"An error occurred: {str(e)}")
     else:
@@ -34,7 +34,6 @@ def copy_to_clipboard():
     else:
         messagebox.showwarning("No Text", "There is no corrected text to copy.")
 
-# Sesli çıktı fonksiyonu
 def speak_text():
     corrected_text = spell_result.cget("text").replace("Corrected Text: ", "")
     if corrected_text.strip():
