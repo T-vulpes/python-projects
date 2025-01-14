@@ -110,7 +110,6 @@ speak_button = tk.Button(
 )
 speak_button.pack(pady=10)
 
-# Tema değiştirme butonu
 theme_button = tk.Button(
     root,
     text="Toggle Theme",
@@ -121,7 +120,6 @@ theme_button = tk.Button(
 )
 theme_button.pack(pady=10)
 
-# Düzeltme geçmişi listesi
 history_label = tk.Label(
     root, text="Correction History:", font=("Poppins", 16), bg="#eef2f7", fg="#2c3e50"
 )
@@ -129,11 +127,9 @@ history_label.pack(pady=10)
 history_list = tk.Listbox(root, width=60, height=10, font=("Poppins", 14), bg="white")
 history_list.pack(pady=10)
 
-# Düzeltme sonucunu göstermek için etiket
 spell_result = tk.Label(
     root, text="", font=("Poppins", 16), bg="#eef2f7", fg="#2c3e50"
 )
 spell_result.pack(pady=20)
 
-# Ana döngü
 root.mainloop()
