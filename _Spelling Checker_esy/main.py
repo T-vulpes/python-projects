@@ -4,13 +4,10 @@ from textblob import TextBlob
 import pyperclip
 import pyttsx3
 
-# Ana pencere oluşturma
 root = tk.Tk()
 root.title("Spelling Checker")
 root.geometry("800x800")
 root.config(background="#eef2f7")
-
-# TTS (Text-to-Speech) motoru
 engine = pyttsx3.init()
 
 # Yazım denetimi fonksiyonu
