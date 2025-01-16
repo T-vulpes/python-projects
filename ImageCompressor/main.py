@@ -12,7 +12,7 @@ def compress_image():
             print("No file selected. Exiting.")
             return
         img = Image.open(file_path)
-        original_size = os.path.getsize(file_path) / 1024  # KB cinsinden boyut
+        original_size = os.path.getsize(file_path) / 1024  
         print(f"Original image size: {original_size:.2f} KB")
         img = img.resize(img.size, Image.LANCZOS)
         
