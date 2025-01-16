@@ -26,9 +26,8 @@ def compress_image():
             print("No save location selected. Exiting.")
             return
         
-        # Sıkıştırılmış resmi kaydet
-        img.save(save_path, "JPEG", quality=85)  # Quality ayarı sıkıştırma oranını kontrol eder
-        compressed_size = os.path.getsize(save_path) / 1024  # KB cinsinden boyut
+        img.save(save_path, "JPEG", quality=85)  
+        compressed_size = os.path.getsize(save_path) / 1024 
         print(f"Compressed image size: {compressed_size:.2f} KB")
         
         print("Image successfully compressed and saved!")
