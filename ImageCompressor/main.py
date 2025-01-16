@@ -4,7 +4,6 @@ from PIL import Image
 
 def compress_image():
     try:
-        # Kullanıcıdan bir dosya seçmesini isteyin
         file_path = askopenfilename(
             title="Select an image to compress",
             filetypes=[("Image Files", "*.png;*.jpg;*.jpeg;*.bmp;*.tiff")]
