@@ -14,11 +14,8 @@ def compress_image():
         img = Image.open(file_path)
         original_size = os.path.getsize(file_path) / 1024  # KB cinsinden boyut
         print(f"Original image size: {original_size:.2f} KB")
-        
-        # Yeniden boyutlandırma ve sıkıştırma
         img = img.resize(img.size, Image.LANCZOS)
         
-        # Kullanıcıdan kaydetme konumu isteyin
         save_path = asksaveasfilename(
             title="Save compressed image",
             defaultextension=".jpg",
