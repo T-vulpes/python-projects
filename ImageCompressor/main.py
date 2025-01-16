@@ -8,12 +8,9 @@ def compress_image():
             title="Select an image to compress",
             filetypes=[("Image Files", "*.png;*.jpg;*.jpeg;*.bmp;*.tiff")]
         )
-        
         if not file_path:
             print("No file selected. Exiting.")
             return
-        
-        # Resmi aç
         img = Image.open(file_path)
         original_size = os.path.getsize(file_path) / 1024  # KB cinsinden boyut
         print(f"Original image size: {original_size:.2f} KB")
