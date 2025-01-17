@@ -24,7 +24,6 @@ root.title("Shutdown Utility")
 root.geometry("400x500")
 root.config(bg="#2c3e50")
 
-# Resimleri yeniden boyutlandırarak yükle
 restarttimebutton = resize_image("restartime.png", 100, 100)
 firstbutton = Button(root, image=restarttimebutton, borderwidth=0, cursor="hand2", command=restarttime, bg="#2c3e50")
 firstbutton.place(x=50, y=50)
@@ -45,7 +44,6 @@ logoutbutton = resize_image("logout.png", 100, 100)
 fifthbutton = Button(root, image=logoutbutton, borderwidth=0, cursor="hand2", command=logout,)
 fifthbutton.place(x=50, y=350)
 
-# Üstte bir etiket ekleyelim
 label = Label(root, text="System Control Panel", font=("Helvetica", 18), fg="white", bg="#2c3e50")
 label.place(x=100, y=10)
 
