@@ -18,7 +18,7 @@ def shutdown():
 
 def logout():
     os.system('shutdown -l')
-
+    
 root = Tk()
 root.title("Shutdown Utility")
 root.geometry("400x500")
