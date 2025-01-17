@@ -1,11 +1,11 @@
 from tkinter import *
-from PIL import Image, ImageTk  # Pillow kütüphanesini kullanıyoruz
+from PIL import Image, ImageTk  
 import os
 
 def resize_image(file_path, width, height):
-    image = Image.open(file_path)  # Resmi aç
-    resized_image = image.resize((width, height), Image.Resampling.LANCZOS)  # Yeni adlandırma
-    return ImageTk.PhotoImage(resized_image)  # Tkinter için dönüştür
+    image = Image.open(file_path)  
+    resized_image = image.resize((width, height), Image.Resampling.LANCZOS)  
+    return ImageTk.PhotoImage(resized_image)
 
 def restarttime():
     os.system('shutdown -r -t 0')
