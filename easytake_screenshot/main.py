@@ -14,14 +14,10 @@ def take_screenshot():
     except Exception as e:
         messagebox.showerror("Hata", f"Ekran görüntüsü alınamadı: {e}")
 
-# Tkinter arayüzü oluştur
 root = tk.Tk()
 root.title("Ekran Görüntüsü Al")
 root.geometry("300x150")
 
-# Buton ekle
 button = tk.Button(root, text="Ekran Görüntüsü Al", command=take_screenshot, bg="blue", fg="white", font=("Arial", 12))
 button.pack(pady=40)
-
-# Tkinter döngüsünü başlat
 root.mainloop()
