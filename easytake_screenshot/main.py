@@ -10,14 +10,14 @@ def take_screenshot():
         screenshot = pyautogui.screenshot()
 
         screenshot.save(filename)
-        messagebox.showinfo("Başarılı", f"Ekran görüntüsü kaydedildi: {filename}")
+        messagebox.showinfo("Success", f"Screenshot saved: {filename}")
     except Exception as e:
-        messagebox.showerror("Hata", f"Ekran görüntüsü alınamadı: {e}")
+        messagebox.showerror("Error", "Failed to take screenshot: {e}")
 
 root = tk.Tk()
-root.title("Ekran Görüntüsü Al")
+root.title("Take Screenshot")
 root.geometry("300x150")
 
-button = tk.Button(root, text="Ekran Görüntüsü Al", command=take_screenshot, bg="blue", fg="white", font=("Arial", 12))
+button = tk.Button(root, text="Take Screenshot", command=take_screenshot, bg="blue", fg="white", font=("Arial", 12))
 button.pack(pady=40)
 root.mainloop()
