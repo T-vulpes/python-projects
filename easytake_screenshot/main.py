@@ -3,17 +3,12 @@ from datetime import datetime
 import tkinter as tk
 from tkinter import messagebox
 
-# Ekran görüntüsü alma fonksiyonu
 def take_screenshot():
     try:
-        # Anlık zaman damgasını al
         timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         filename = f"screenshot_{timestamp}.png"
-
-        # Ekran görüntüsünü al
         screenshot = pyautogui.screenshot()
 
-        # Görüntüyü dosya olarak kaydet
         screenshot.save(filename)
         messagebox.showinfo("Başarılı", f"Ekran görüntüsü kaydedildi: {filename}")
     except Exception as e:
