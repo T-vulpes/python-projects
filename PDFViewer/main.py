@@ -1,15 +1,12 @@
-import fitz  # PyMuPDF
+import fitz  
 from tkinter import *
 from PIL import Image, ImageTk
 from tkinter import filedialog
 
-# Ana pencereyi oluştur
 root = Tk()
 root.geometry("900x700")
 root.title("Vivid PDF Viewer")
-
-# Arka plan rengi
-root.configure(bg="#f5f5dc")  # Bej arka plan
+root.configure(bg="#f5f5dc") 
 
 # Kaydırma çubuğu için Frame ve Canvas oluştur
 frame = Frame(root, bg="#d9ead3")  # Açık yeşil çerçeve
