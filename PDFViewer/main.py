@@ -33,26 +33,23 @@ def browse_files():
 
 def display_pdf(pdf_path):
     global images
-    images.clear()  # Önceki yüklenmiş PDF'yi temizle
+    images.clear()  
     for widget in inner_frame.winfo_children():
-        widget.destroy()  # İçeriği temizle
+        widget.destroy()  
 
-    # PDF Belgesini Aç
     pdf_document = fitz.open(pdf_path)
     page_count = pdf_document.page_count
 
     for page_number in range(page_count):
         page = pdf_document[page_number]
-        pix = page.get_pixmap()  # Sayfayı bir görsele dönüştür
+        pix = page.get_pixmap()  
         img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
         img_tk = ImageTk.PhotoImage(img)
-        images.append(img_tk)  # Görüntüyü referans olarak listeye ekle
+        images.append(img_tk) 
 
-        # Görüntüyü Canvas üzerine ekleyin
         label = Label(inner_frame, image=img_tk, bg="#ffffff")
         label.pack(pady=10)
 
-    # Canvas ve içerik boyutunu güncelle
     inner_frame.update_idletasks()
     canvas.config(scrollregion=canvas.bbox("all"))
     canvas.yview_moveto(0)
