@@ -55,19 +55,15 @@ def display_pdf(pdf_path):
     # Canvas ve içerik boyutunu güncelle
     inner_frame.update_idletasks()
     canvas.config(scrollregion=canvas.bbox("all"))
-
-    # PDF'yi yükledikten sonra en üste kaydır
     canvas.yview_moveto(0)
 
-# Mouse tekerleği ile kaydırmayı aktifleştirme
 def on_mousewheel(event):
     canvas.yview_scroll(-1 * int(event.delta / 120), "units")
 
-canvas.bind_all("<MouseWheel>", on_mousewheel)  # Windows ve Linux
-canvas.bind_all("<Button-4>", lambda e: canvas.yview_scroll(-1, "units"))  # Linux
-canvas.bind_all("<Button-5>", lambda e: canvas.yview_scroll(1, "units"))  # Linux
+canvas.bind_all("<MouseWheel>", on_mousewheel)  # Windows 
+canvas.bind_all("<Button-4>", lambda e: canvas.yview_scroll(-1, "units"))   #linux
+canvas.bind_all("<Button-5>", lambda e: canvas.yview_scroll(1, "units"))  #linux
 
-# Şık buton
 btn_frame = Frame(root, bg="#f5f5dc")
 btn_frame.pack(pady=10)
 
@@ -87,9 +83,6 @@ open_btn = Button(
 )
 open_btn.pack()
 
-# Başlangıçta görünürlük sorununu çözmek için iç çerçeve boyutunu ayarla
 inner_frame.update_idletasks()
 canvas.config(scrollregion=canvas.bbox("all"))
-
-# Uygulamayı çalıştır
 root.mainloop()
