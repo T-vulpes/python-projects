@@ -18,7 +18,7 @@ scrollbar.pack(side=RIGHT, fill=Y)
 canvas.pack(side=LEFT, fill=BOTH, expand=True)
 canvas.configure(yscrollcommand=scrollbar.set)
 
-inner_frame = Frame(canvas, bg="#ffffff")  # Beyaz iç çerçeve
+inner_frame = Frame(canvas, bg="#ffffff")  
 canvas.create_window((0, 0), window=inner_frame, anchor="nw")
 
 images = []
