@@ -8,11 +8,10 @@ root.geometry("900x700")
 root.title("Vivid PDF Viewer")
 root.configure(bg="#f5f5dc") 
 
-# Kaydırma çubuğu için Frame ve Canvas oluştur
-frame = Frame(root, bg="#d9ead3")  # Açık yeşil çerçeve
+frame = Frame(root, bg="#d9ead3")  
 frame.pack(fill=BOTH, expand=True, padx=10, pady=10)
 
-canvas = Canvas(frame, bg="#ffffff", highlightthickness=0)  # Beyaz canvas
+canvas = Canvas(frame, bg="#ffffff", highlightthickness=0) 
 scrollbar = Scrollbar(frame, orient=VERTICAL, command=canvas.yview, bg="#d9ead3")
 scrollbar.pack(side=RIGHT, fill=Y)
 
@@ -22,10 +21,8 @@ canvas.configure(yscrollcommand=scrollbar.set)
 inner_frame = Frame(canvas, bg="#ffffff")  # Beyaz iç çerçeve
 canvas.create_window((0, 0), window=inner_frame, anchor="nw")
 
-# Görselleri tutacak liste
 images = []
 
-# Dosya seçme ve PDF görüntüleme
 def browse_files():
     filename = filedialog.askopenfilename(
         title="Select PDF File",
