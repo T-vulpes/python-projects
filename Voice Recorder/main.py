@@ -61,5 +61,4 @@ record_button.pack(pady=30)
 
 countdown_label = Label(text="", font="arial 20 bold", background="#ffffff", fg="#000000")
 countdown_label.pack(pady=20)
-
 root.mainloop()
