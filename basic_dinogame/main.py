@@ -54,7 +54,6 @@ window.listen()
 window.onkeypress(jump, 'space')
 
 start_time = time.time()
-
 while True:
     time.sleep(0.01)
     current_time = time.time() - start_time
