@@ -50,7 +50,6 @@ class SpeedTypingTest:
 
         self.result_label = tk.Label(root, text="", font=("Helvetica", 16), bg="#d1c4e9", fg="#5e35b1")
         self.result_label.pack(pady=10)
-
         self.start_button = tk.Button(root, text="Start Test", command=self.start_test, font=("Helvetica", 14), bg="#7e57c2", fg="white")
         self.start_button.pack(pady=10)
 
