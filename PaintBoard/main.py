@@ -15,14 +15,14 @@ toolbar.pack(side=LEFT, fill=Y)
 brush_size = IntVar(value=3)
 
 def update_brush_size(val):
-    brush_size.set(int(float(val)))  # String değerini integer'a çevir
+    brush_size.set(int(float(val)))  
 
 Label(toolbar, text="Brush Size", bg="#d9d9d9", font=("Arial", 10, "bold")).pack(pady=(10, 0))
 size_slider = ttk.Scale(toolbar, from_=1, to=20, orient=HORIZONTAL, length=60, command=update_brush_size)
 size_slider.set(3)
 size_slider.pack(pady=5)
 
-# ✏️ Fırça Şekli
+# ✏️ 
 Label(toolbar, text="Brush Shape", bg="#d9d9d9", font=("Arial", 10, "bold")).pack(pady=(10, 0))
 shape_menu = ttk.Combobox(toolbar, values=["round", "line"], state="readonly", width=6)
 shape_menu.current(0)
