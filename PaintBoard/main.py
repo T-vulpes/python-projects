@@ -40,7 +40,6 @@ colors.pack(pady=10)
 
 canvas = Canvas(root, bg="white", width=1000, height=600, cursor="hand2")
 canvas.pack(side=RIGHT, fill=BOTH, expand=True)
-
 selected_color = "black"
 
 def show_color(color):
@@ -70,11 +69,11 @@ canvas.bind("<B1-Motion>", draw)
 canvas.bind("<ButtonRelease-1>", stop_draw)
 
 def display_palette():
-    renkler = ["black", "red", "green", "blue", "yellow", "orange", "purple", "pink", "gray", "brown"]
+    colorpalette = ["black", "red", "green", "blue", "yellow", "orange", "purple", "pink", "gray", "brown"]
     y = 10
-    for renk in renkler:
-        id = colors.create_rectangle((10, y, 50, y + 20), fill=renk, outline="black")
-        colors.tag_bind(id, "<Button-1>", lambda x, c=renk: show_color(c))
+    for colorch in colorpalette:
+        id = colors.create_rectangle((10, y, 50, y + 20), fill=colorch, outline="black")
+        colors.tag_bind(id, "<Button-1>", lambda x, c=colorch: show_color(c))
         y += 30
 
 display_palette()
