@@ -28,17 +28,16 @@ shape_menu = ttk.Combobox(toolbar, values=["round", "line"], state="readonly", w
 shape_menu.current(0)
 shape_menu.pack(pady=5)
 
-# 🧽 Silgi Butonu
+# 🧽 
 eraser_img = Image.open("eraser.png").resize((40, 40), Image.LANCZOS)
 eraser_img = ImageTk.PhotoImage(eraser_img)
 eraser_button = Button(toolbar, image=eraser_img, bg="#d9d9d9", relief=FLAT, command=lambda: show_color("white"))
 eraser_button.pack(pady=10)
 
-# 🎨 Renk Paleti
+# 🎨
 colors = Canvas(toolbar, bg="#d9d9d9", width=60, height=300, bd=0, highlightthickness=0)
 colors.pack(pady=10)
 
-# 🎨 Çizim Alanı
 canvas = Canvas(root, bg="white", width=1000, height=600, cursor="hand2")
 canvas.pack(side=RIGHT, fill=BOTH, expand=True)
 
