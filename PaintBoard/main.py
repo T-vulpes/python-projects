@@ -78,5 +78,4 @@ def display_palette():
         y += 30
 
 display_palette()
-
 root.mainloop()
