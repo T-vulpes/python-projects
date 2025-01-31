@@ -7,11 +7,11 @@ root.title("WhiteBoard")
 root.geometry("1100x600+150+50")
 root.configure(bg="#e8e8e8")
 
-# 🖌️ Araç Çubuğu Çerçevesi
+# 🖌️ 
 toolbar = Frame(root, bg="#d9d9d9", width=80, height=600)
 toolbar.pack(side=LEFT, fill=Y)
 
-# 📌 Fırça Boyutu
+# 📌 
 brush_size = IntVar(value=3)
 
 def update_brush_size(val):
