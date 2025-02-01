@@ -35,20 +35,17 @@ def pausemusic():
 def stopmusic():
     mixer.music.stop()
 
-# Görselleri yükleyip istenen boyuta getiren fonksiyon
 def load_image(image_path, width, height):
     image = Image.open(image_path)
     image = image.resize((width, height), Image.LANCZOS)
     return ImageTk.PhotoImage(image)
 
-# Görselleri aynı boyuta ayarla (örneğin 80x80)
 img_width = 80
 img_height = 80
 play_img = load_image("play.png", img_width, img_height)
 pause_img = load_image("pause.png", img_width, img_height)
 stop_img = load_image("stop.png", img_width, img_height)
 
-# Başlık etiketi
 title_label = Label(root, text="Music Player", font=("Helvetica", 24, "bold"), bg="#f0f0f0", fg="#333")
 title_label.pack(pady=20)
 
