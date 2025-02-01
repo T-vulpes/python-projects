@@ -2,19 +2,17 @@ from tkinter import *
 from tkinter import filedialog
 from pygame import mixer
 import os
-from PIL import Image, ImageTk  # Pillow kütüphanesi
+from PIL import Image, ImageTk  
 
-# Arayüzü oluşturma
 root = Tk()
 root.title("Music Player")
 root.geometry("920x670+290+85")
-root.configure(bg="#f0f0f0")  # Açık arka plan
+root.configure(bg="#f0f0f0")  
 root.resizable(False, False)
 
 mixer.init()
 directory = ""
 
-# Klasör açma fonksiyonu
 def openfolder():
     global directory
     directory = filedialog.askdirectory()
