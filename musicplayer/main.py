@@ -69,6 +69,7 @@ playlist_frame.pack(pady=20, padx=20, fill=BOTH, expand=True)
 scroll = Scrollbar(playlist_frame)
 playlist = Listbox(playlist_frame, font=("Arial", 10), bg="#ffffff", fg="black",
                    selectbackground="lightblue", cursor="hand2", bd=0, yscrollcommand=scroll.set)
+
 scroll.config(command=playlist.yview)
 scroll.pack(side=RIGHT, fill=Y)
 playlist.pack(side=LEFT, fill=BOTH, expand=True)
