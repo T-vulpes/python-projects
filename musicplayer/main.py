@@ -23,18 +23,15 @@ def openfolder():
         for song in songs:
             playlist.insert(END, song)
 
-# Müzik çalma fonksiyonu
 def playmusic():
     selected_song = playlist.get(ACTIVE)
     if selected_song:
         mixer.music.load(os.path.join(directory, selected_song))
         mixer.music.play()
 
-# Müziği duraklatma fonksiyonu
 def pausemusic():
     mixer.music.pause()
 
-# Müziği durdurma fonksiyonu
 def stopmusic():
     mixer.music.stop()
 
