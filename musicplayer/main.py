@@ -49,7 +49,6 @@ stop_img = load_image("stop.png", img_width, img_height)
 title_label = Label(root, text="Music Player", font=("Helvetica", 24, "bold"), bg="#f0f0f0", fg="#333")
 title_label.pack(pady=20)
 
-# Buton çerçevesi (kontroller)
 button_frame = Frame(root, bg="#f0f0f0")
 button_frame.pack(pady=20)
 
@@ -61,12 +60,9 @@ btn_play.grid(row=0, column=0, padx=20)
 btn_pause.grid(row=0, column=1, padx=20)
 btn_stop.grid(row=0, column=2, padx=20)
 
-# Klasör açma butonu
 folder_btn = Button(root, text="Open Folder", width=15, height=2, font=("Arial", 10, "bold"),
                     fg="white", bg="#a21b3d", command=openfolder)
 folder_btn.pack(pady=20)
-
-# Çalma listesi çerçevesi
 playlist_frame = Frame(root, bd=2, relief=RIDGE, bg="#d9d9d9")
 playlist_frame.pack(pady=20, padx=20, fill=BOTH, expand=True)
 
