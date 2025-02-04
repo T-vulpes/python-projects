@@ -1,7 +1,7 @@
 from tkinter import *
 
 sc = Tk()
-sc.title("Mood")
+sc.title("L/D/M")
 sc.geometry("400x600")
 sc.config(bg="#dde0e8")
 
