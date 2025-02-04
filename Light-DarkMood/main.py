@@ -18,8 +18,7 @@ def customize():
         sc.config(bg="#dde0e8")
         button_mode = True
 
-# Resimleri subsample ile küçült
-on = PhotoImage(file="1.png").subsample(5, 5)  # 3 kat küçült
+on = PhotoImage(file="1.png").subsample(5, 5)  
 off = PhotoImage(file="2.png").subsample(5, 5)
 
 button = Button(sc, image=on, bd=0, bg="#dde0e8", command=customize)
