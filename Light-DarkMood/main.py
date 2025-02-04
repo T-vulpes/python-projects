@@ -23,5 +23,4 @@ off = PhotoImage(file="2.png").subsample(5, 5)
 
 button = Button(sc, image=on, bd=0, bg="#dde0e8", command=customize)
 button.pack(padx=50, pady=50)
-
 sc.mainloop()
