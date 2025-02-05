@@ -17,15 +17,13 @@ async def translate_text():
         messagebox.showerror("Translation Error", str(e))
 
 def translate_now():
-    asyncio.run(translate_text())  # Asenkron fonksiyonu çalıştır
+    asyncio.run(translate_text())  
 
-# Ana pencere
 root = tk.Tk()
 root.title("Modern Google Translator")
 root.geometry("900x500")
-root.configure(bg="#f4f4f4")  # Arka plan rengi
+root.configure(bg="#f4f4f4")  
 
-# Resmi yeniden boyutlandır
 original_image = Image.open("arrow.png")
 resized_image = original_image.resize((120, 60), Image.Resampling.LANCZOS)
 arrow = ImageTk.PhotoImage(resized_image)
