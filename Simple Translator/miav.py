@@ -7,8 +7,7 @@ import asyncio
 
 async def translate_text():
     text_input = source_text.get(1.0, tk.END)
-    translator = Translator()
-    
+    translator = Translator()    
     try:
         translated_text = await translator.translate(text_input, src=source_combo.get(), dest=target_combo.get())
         target_text.delete(1.0, tk.END)
@@ -20,7 +19,7 @@ def translate_now():
     asyncio.run(translate_text())  
 
 root = tk.Tk()
-root.title("Modern Google Translator")
+root.title("Translator")
 root.geometry("900x500")
 root.configure(bg="#f4f4f4")  
 
@@ -71,5 +70,4 @@ target_text.configure(yscrollcommand=scrollbar2.set)
 translate_button = tk.Button(root, text="Translate", font="Roboto 12 bold", activebackground="#6c63ff", cursor="hand2",
                           bd=0, width=12, height=2, bg="#6c63ff", fg="white", command=translate_now)
 translate_button.place(x=380, y=330)
-
 root.mainloop()
