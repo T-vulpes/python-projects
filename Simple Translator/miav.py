@@ -31,7 +31,6 @@ arrow = ImageTk.PhotoImage(resized_image)
 image_label = tk.Label(root, image=arrow, bg="#f4f4f4")
 image_label.place(x=390, y=30)
 
-# Dil Seçenekleri
 languages = googletrans.LANGUAGES
 language_values = list(languages.values())
 
@@ -49,7 +48,6 @@ target_combo.set("Select Language")
 target_label = tk.Label(root, text="To:", font="Roboto 11 bold", bg="#f4f4f4")
 target_label.place(x=600, y=10)
 
-# Kaynak Metin Alanı
 source_frame = tk.Frame(root, bg="white", bd=2, relief=tk.GROOVE)
 source_frame.place(x=50, y=100, width=370, height=200)
 
@@ -60,7 +58,6 @@ scrollbar1 = tk.Scrollbar(source_frame, command=source_text.yview)
 scrollbar1.pack(side="right", fill="y")
 source_text.configure(yscrollcommand=scrollbar1.set)
 
-# Çeviri Metin Alanı
 target_frame = tk.Frame(root, bg="white", bd=2, relief=tk.GROOVE)
 target_frame.place(x=480, y=100, width=370, height=200)
 
