@@ -68,7 +68,6 @@ scrollbar2 = tk.Scrollbar(target_frame, command=target_text.yview)
 scrollbar2.pack(side="right", fill="y")
 target_text.configure(yscrollcommand=scrollbar2.set)
 
-# Çeviri Butonu
 translate_button = tk.Button(root, text="Translate", font="Roboto 12 bold", activebackground="#6c63ff", cursor="hand2",
                           bd=0, width=12, height=2, bg="#6c63ff", fg="white", command=translate_now)
 translate_button.place(x=380, y=330)
