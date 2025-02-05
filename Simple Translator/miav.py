@@ -1,11 +1,10 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
-from PIL import Image, ImageTk  # Görselleri düzenlemek için
+from PIL import Image, ImageTk 
 import googletrans
 from googletrans import Translator
-import asyncio  # Asenkron işlemler için
+import asyncio 
 
-# Çeviri işlemi
 async def translate_text():
     text_input = source_text.get(1.0, tk.END)
     translator = Translator()
