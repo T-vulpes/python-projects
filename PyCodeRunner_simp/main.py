@@ -62,19 +62,16 @@ code_input.place(x=180, y=0, width=680, height=720)
 code_output = Text(root, font=("Consolas", 14), bg=dark_grey, fg=terminal_green, insertbackground="white", borderwidth=2, relief=SOLID)
 code_output.place(x=860, y=0, width=420, height=720)
 
-# Load and Resize Buttons
 openimg = PhotoImage(file="open.png").subsample(3, 3)
 saveimg = PhotoImage(file="save.png").subsample(3, 3)
 runimg = PhotoImage(file="run.png").subsample(3, 3)
 
-# Neon Button Styling
 button_style = {"bg": "#0F0F0F", "bd": 2, "highlightthickness": 2, "highlightbackground": "#00FF00", "highlightcolor": "#00FF00", "width": 60, "height": 60}
 
 Button(root, image=openimg, **button_style, command=openfile).place(x=30, y=30)
 Button(root, image=runimg, **button_style, command=runfile).place(x=30, y=145)
 Button(root, image=saveimg, **button_style, command=savefile).place(x=30, y=260)
 
-# Additional Features: Status Bar
 status_bar = Label(root, text="Ready", bd=1, relief=SUNKEN, anchor=W, bg="#1E1E1E", fg="white")
 status_bar.pack(side=BOTTOM, fill=X)
 
