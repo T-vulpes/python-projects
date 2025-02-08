@@ -6,7 +6,7 @@ import os, subprocess
 root = Tk()
 root.title("Python Idle")
 root.geometry("1280x720+150+80")
-root.configure(bg="#1E1E1E")  # Dark background
+root.configure(bg="#1E1E1E")  
 root.resizable(False, False)
 
 file_path = ""
