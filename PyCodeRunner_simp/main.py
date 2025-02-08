@@ -51,9 +51,8 @@ def savefile():
         file.write(code)
         set_file_path(path)
 
-# Styling Text Areas
 dark_grey = "#2D2D2D"
-code_color = "#FFCC00"  # Yellowish text color for the input field
+code_color = "#FFCC00"  
 terminal_green = "#00FF00"
 
 code_input = Text(root, font=("Consolas", 14), bg=dark_grey, fg=code_color, insertbackground="white", borderwidth=2, relief=SOLID)
