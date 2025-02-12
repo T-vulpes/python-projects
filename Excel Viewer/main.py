@@ -52,7 +52,7 @@ def open_file():
         messagebox.showwarning("Warning", "The selected file is empty.")
         return  
 
-    tree.delete(*tree.get_children())  # Önceki verileri temizle
+    tree.delete(*tree.get_children())  
 
     tree["columns"] = list(df.columns)
     tree["show"] = "headings"
@@ -61,7 +61,6 @@ def open_file():
         tree.heading(col, text=col)
         tree.column(col, width=150, anchor="center")
 
-    # Verileri Treeview'e ekleme
     for row in df.itertuples(index=False):
         tree.insert("", "end", values=row)
 
