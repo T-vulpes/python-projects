@@ -68,13 +68,11 @@ def open_file():
 root = Tk()
 root.title("Excel Viewer - Dark Mode")
 root.geometry("1200x500+200+150")
-
 style_config()
 
 frame = Frame(root, bg="#1e1e1e")
 frame.pack(pady=15, padx=15, fill=BOTH, expand=True)
 
-# Treeview ve Scrollbar ekleme
 tree_frame = Frame(frame, bg="#1e1e1e")
 tree_frame.pack(fill=BOTH, expand=True)
 
@@ -89,7 +87,6 @@ tree_scroll_x.pack(side=BOTTOM, fill=X)
 tree_scroll_y.pack(side=RIGHT, fill=Y)
 tree.pack(fill=BOTH, expand=True)
 
-# Şık Buton
 button = ttk.Button(root, text="Open Excel File", command=open_file)
 button.pack(pady=15)
 
