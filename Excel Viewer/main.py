@@ -3,15 +3,11 @@ from tkinter import messagebox
 import pandas as pd
 from tkinter import ttk, filedialog
 
-# Stil Ayarları
 def style_config():
     style = ttk.Style()
     style.theme_use("clam")
-
-    # Ana arka plan ve çerçeve renkleri
     root.configure(bg="#1e1e1e")
     
-    # Buton Stili
     style.configure("TButton",
                     font=("Arial", 12, "bold"),
                     padding=10,
@@ -21,7 +17,6 @@ def style_config():
     style.map("TButton",
               background=[("active", "#0078d7")])
 
-    # Treeview (Tablo) Stili
     style.configure("Treeview",
                     font=("Arial", 11),
                     rowheight=30,
