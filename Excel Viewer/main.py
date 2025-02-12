@@ -29,7 +29,6 @@ def style_config():
                     background="#333",
                     foreground="white")
 
-    # Scrollbar Stili
     style.configure("TScrollbar",
                     background="#333",
                     troughcolor="#1e1e1e",
@@ -43,7 +42,6 @@ def open_file():
 
     if not filename:
         return  
-
     try:
         df = pd.read_excel(filename)
     except Exception as e:
@@ -56,7 +54,6 @@ def open_file():
 
     tree.delete(*tree.get_children())  # Önceki verileri temizle
 
-    # Sütunları güncelleme
     tree["columns"] = list(df.columns)
     tree["show"] = "headings"
 
