@@ -94,11 +94,9 @@ while True:
     y = obstacles[i].ycor()
     y = y - 2
     obstacles[i].sety(y)
-
     if obstacles[i].distance(car) < 30:
         print('Crashed')
 
     window.update()
-
     background.clear()
     car.clear()
