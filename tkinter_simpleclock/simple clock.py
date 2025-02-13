@@ -8,17 +8,14 @@ class SimpleClock:
         self.root = root
         self.root.title("Simple Clock")
         self.root.geometry("400x400")
-
         self.canvas = Canvas(root, width=500, height=500, bg='darkred')
-        self.canvas.pack()
-
+        self.canvas.pack(
         self.update_clock()
 
     def update_clock(self):
         current_time = time.strftime('%Y-%m-%d %H:%M:%S')
 
         self.canvas.delete("all") 
-
         self.canvas.create_oval(50, 50, 350, 350, outline='white', width=4)
 
         for i in range(12):
