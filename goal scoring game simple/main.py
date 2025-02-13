@@ -1,4 +1,3 @@
-#Goal Scoring Game
 import pygame
 import random
 
@@ -81,11 +80,8 @@ while running:
         goal_scored = False
 
     win.blit(bg_img, (0, 0))
-    
     win.blit(goal_img, (goal_x, goal_y))
-    
     win.blit(player_img, (player_x, player_y))
-    
     win.blit(ball_img, (ball_x, ball_y))
     
     font = pygame.font.Font(None, 36)
