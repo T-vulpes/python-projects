@@ -31,10 +31,7 @@ root.title("Speed Test")
 root.geometry("360x600")
 root.configure(bg="#1a212d")
 
-# Bekleme mesajı
 Label(root, text="Please wait for the result...", font="arial 9 italic", bg="#1a212d", fg="white").pack(pady=5)
-
-# Görseller
 top_img = PhotoImage(file="top.png").subsample(2)
 Label(root, image=top_img, bg="#1a212d").pack()
 
