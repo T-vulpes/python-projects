@@ -51,7 +51,6 @@ Label(root, text="MS", font="arial 7 bold", bg="#384056", fg="white").place(x=75
 Label(root, text="MBPS", font="arial 7 bold", bg="#384056", fg="white").place(x=165, y=100)
 Label(root, text="MBPS", font="arial 7 bold", bg="#384056", fg="white").place(x=265, y=100)
 
-# Veriler de aşağı alındı
 ping = Label(root, text="00", font="arial 10 bold", bg="#384056", fg="white")
 ping.place(x=95, y=65, anchor="center")
 
@@ -60,8 +59,6 @@ download.place(x=180, y=65, anchor="center")
 
 upload = Label(root, text="00", font="arial 10 bold", bg="#384056", fg="white")
 upload.place(x=270, y=65, anchor="center")
-
-# Büyük sayı küçültüldü
 Downlad = Label(root, text="00", font="arial 30 bold", bg="#384056", fg="white")
 Downlad.place(x=185, y=270, anchor="center")
 
