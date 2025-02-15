@@ -42,8 +42,7 @@ button_img = PhotoImage(file="startbutton.png").subsample(2)
 start_button = Button(root, image=button_img, bg="#1a212d", bd=0, activebackground="#1a212d", cursor="hand2", command=check)
 start_button.pack(pady=10)
 
-# Başlık yazıları biraz daha aşağı alındı
-Label(root, text="PING", font="arial 9 bold", bg="#384056", fg="white").place(x=85, y=80)  # Y değeri artırıldı
+Label(root, text="PING", font="arial 9 bold", bg="#384056", fg="white").place(x=85, y=80)  
 Label(root, text="DOWNLOAD", font="arial 9 bold", bg="#384056", fg="white").place(x=140, y=80)
 Label(root, text="UPLOAD", font="arial 9 bold", bg="#384056", fg="white").place(x=250, y=80)
 
