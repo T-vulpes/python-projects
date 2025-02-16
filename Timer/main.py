@@ -13,7 +13,6 @@ heading = Label(root, text="Timer", font="arial 30 bold", bg="#000", fg="gold")
 heading.pack(pady=10)
 
 Label(root, text="Current Time :", font="arial 15 bold", bg="papaya whip").place(x=65, y=70)
-
 def clock():
     clock_time = time.strftime('%H:%M:%S %p')
     current_time.config(text=clock_time)
