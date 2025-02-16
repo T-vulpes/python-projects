@@ -4,7 +4,7 @@ import time
 import threading
 
 root = Tk()
-root.title("GOLDTimer")
+root.title("GoldTimer")
 root.geometry("400x600")
 root.config(bg="#000")
 root.resizable(False, False)
