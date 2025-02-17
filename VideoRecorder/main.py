@@ -62,7 +62,6 @@ label.pack(pady=15)
 status_label = Label(root, text="Ready", bg="#1e1e1e", fg="#ffffff", font=("Arial", 14))
 status_label.pack(pady=5)
 
-# Load Images
 try:
     img_start = ImageTk.PhotoImage(Image.open("ar.png").resize((60, 60)))
     img_pause = ImageTk.PhotoImage(Image.open("st-pa.png").resize((60, 60)))
@@ -72,13 +71,11 @@ except Exception as e:
     print("Failed to load images:", e)
     img_start = img_pause = img_resume = img_stop = None
 
-# Filename Entry
 filename = StringVar()
 entry = ttk.Entry(root, textvariable=filename, width=20, font=("Arial", 14))
 entry.pack(pady=10)
 filename.set("recording88")
 
-# Buttons Frame
 frame = ttk.Frame(root, style="Dark.TFrame")
 frame.pack(pady=20)
 
