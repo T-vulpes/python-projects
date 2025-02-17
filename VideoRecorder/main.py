@@ -7,7 +7,6 @@ import datetime
 import threading
 import time
 
-# Start Recording
 def start():
     file = filename.get().strip()
     if not file:
@@ -18,7 +17,6 @@ def start():
     recording = True
     threading.Thread(target=update_timer, daemon=True).start()
 
-# Pause Recording
 def pause():
     rec.pause_recording()
     status_label.config(text="Paused", fg="#ffaa00")
