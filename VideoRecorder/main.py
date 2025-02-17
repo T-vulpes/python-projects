@@ -43,18 +43,14 @@ def update_timer():
         status_label.config(text=f"Recording: {elapsed_time}s")
         time.sleep(1)
 
-# Window Settings
 root = Tk()
 root.geometry("400x600")
 root.title("Screen Recorder")
-root.config(bg="#1e1e1e")  # Dark Mode
+root.config(bg="#1e1e1e") 
 root.resizable(False, False)
 
-# Recorder Instance
 rec = pyscreenrec.ScreenRecorder()
 recording = False
-
-# Title
 label = Label(root, text="Screen Recorder", bg="#1e1e1e", fg="#ffffff", font=("Arial", 22, "bold"))
 label.pack(pady=15)
 
