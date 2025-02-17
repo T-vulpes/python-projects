@@ -54,7 +54,6 @@ recording = False
 label = Label(root, text="Screen Recorder", bg="#1e1e1e", fg="#ffffff", font=("Arial", 22, "bold"))
 label.pack(pady=15)
 
-# Status Label
 status_label = Label(root, text="Ready", bg="#1e1e1e", fg="#ffffff", font=("Arial", 14))
 status_label.pack(pady=5)
 
