@@ -23,7 +23,6 @@ def pause():
     global recording
     recording = False
 
-# Resume Recording
 def resume():
     rec.resume_recording()
     status_label.config(text="Recording resumed", fg="#00ff00")
@@ -31,14 +30,12 @@ def resume():
     recording = True
     threading.Thread(target=update_timer, daemon=True).start()
 
-# Stop Recording
 def stop():
     rec.stop_recording()
     status_label.config(text="Stopped", fg="#ff0000")
     global recording
     recording = False
 
-# Update Timer
 def update_timer():
     start_time = time.time()
     while recording:
