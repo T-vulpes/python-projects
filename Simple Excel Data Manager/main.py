@@ -4,7 +4,6 @@ from tkinter import messagebox
 import openpyxl
 import pathlib
 
-# 📂 Excel dosya bağlantısı
 file_path = "data.xlsx"
 file = pathlib.Path(file_path)
 if not file.exists():
@@ -13,7 +12,6 @@ if not file.exists():
     sheet.append(["Name", "Surname", "Age", "Job"])  # Başlıklar
     wb.save(file_path)
 
-# ✅ Submit fonksiyonu (Yeni veri ekleme)
 def submit():
     name = nameValue.get()
     surname = SurnameValue.get()
@@ -32,7 +30,6 @@ def submit():
     messagebox.showinfo("Success", "Data added successfully!")
     clear()
 
-# 🔍 Kayıtları listeleme fonksiyonu
 def show_data():
     wb = openpyxl.load_workbook(file_path)
     sheet = wb.active
