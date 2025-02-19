@@ -106,7 +106,6 @@ Label(root, text="Surname", font="Arial 12", bg="#1e3d59", fg="#f5f5f5").place(x
 Label(root, text="Age", font="Arial 12", bg="#1e3d59", fg="#f5f5f5").place(x=180, y=200)
 Label(root, text="Job", font="Arial 12", bg="#1e3d59", fg="#f5f5f5").place(x=180, y=250)
 
-# 📝 Form Giriş Alanları
 nameValue = StringVar()
 SurnameValue = StringVar()
 ageValue = StringVar()
@@ -124,7 +123,6 @@ surnameentry.place(x=300, y=150)
 ageentry.place(x=300, y=200)
 jobentry.place(x=300, y=250)
 
-# 🎛️ Butonlar
 btn_style = {"bg": "#ff6b6b", "fg": "#fff", "font": "Arial 12 bold", "width": 15, "height": 2}
 
 Button(root, text="Submit", command=submit, **btn_style).place(x=100, y=400)
