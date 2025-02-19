@@ -92,7 +92,7 @@ root = Tk()
 root.geometry("800x550+250+100")  
 root.title("Data Entry Form")
 root.resizable(False, False)
-root.configure(bg="#1e3d59")  # Modern mavi tonları
+root.configure(bg="#1e3d59") 
 
 Label(root, text="Please fill out this entry form:", font="Arial 16 bold", bg="#1e3d59", fg="#f5f5f5").place(x=250, y=30)
 Label(root, text="Name", font="Arial 12", bg="#1e3d59", fg="#f5f5f5").place(x=180, y=100)
