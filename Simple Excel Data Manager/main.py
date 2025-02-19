@@ -9,7 +9,7 @@ file = pathlib.Path(file_path)
 if not file.exists():
     wb = openpyxl.Workbook()
     sheet = wb.active
-    sheet.append(["Name", "Surname", "Age", "Job"])  # Başlıklar
+    sheet.append(["Name", "Surname", "Age", "Job"]) 
     wb.save(file_path)
 
 def submit():
