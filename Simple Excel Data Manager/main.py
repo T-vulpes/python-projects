@@ -51,7 +51,6 @@ def show_data():
     for row in sheet.iter_rows(values_only=True):
         text.insert(END, f"{row[0]}\t{row[1]}\t{row[2]}\t{row[3]}\n")
 
-# ❌ Silme fonksiyonu (Girilen isim ve soyisme göre)
 def delete_entry():
     name = nameValue.get()
     surname = SurnameValue.get()
@@ -65,7 +64,6 @@ def delete_entry():
     rows = list(sheet.iter_rows(values_only=True))
     
     new_rows = [rows[0]]  # Başlıkları sakla
-
     deleted = False
     for row in rows[1:]:
         if row[0] == name and row[1] == surname:
@@ -84,14 +82,12 @@ def delete_entry():
     else:
         messagebox.showerror("Error", "No matching record found!")
 
-# 🔄 Clear fonksiyonu (Formu temizleme)
 def clear():
     nameValue.set("")
     SurnameValue.set("")
     ageValue.set("")
     JobValue.set("")
 
-# 🎨 Arayüz tasarımı
 root = Tk()
 root.geometry("800x550+250+100")  # Daha geniş pencere
 root.title("Data Entry Form")
@@ -99,8 +95,6 @@ root.resizable(False, False)
 root.configure(bg="#1e3d59")  # Modern mavi tonları
 
 Label(root, text="Please fill out this entry form:", font="Arial 16 bold", bg="#1e3d59", fg="#f5f5f5").place(x=250, y=30)
-
-# 🏷️ Form Etiketleri
 Label(root, text="Name", font="Arial 12", bg="#1e3d59", fg="#f5f5f5").place(x=180, y=100)
 Label(root, text="Surname", font="Arial 12", bg="#1e3d59", fg="#f5f5f5").place(x=180, y=150)
 Label(root, text="Age", font="Arial 12", bg="#1e3d59", fg="#f5f5f5").place(x=180, y=200)
