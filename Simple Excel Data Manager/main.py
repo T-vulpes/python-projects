@@ -63,7 +63,7 @@ def delete_entry():
     sheet = wb.active
     rows = list(sheet.iter_rows(values_only=True))
     
-    new_rows = [rows[0]]  # Başlıkları sakla
+    new_rows = [rows[0]] 
     deleted = False
     for row in rows[1:]:
         if row[0] == name and row[1] == surname:
@@ -72,7 +72,7 @@ def delete_entry():
             new_rows.append(row)
 
     if deleted:
-        wb.remove(wb.active)  # Eski sayfayı sil
+        wb.remove(wb.active) 
         new_sheet = wb.create_sheet(title="Sheet1", index=0)
         for row in new_rows:
             new_sheet.append(row)
@@ -89,7 +89,7 @@ def clear():
     JobValue.set("")
 
 root = Tk()
-root.geometry("800x550+250+100")  # Daha geniş pencere
+root.geometry("800x550+250+100")  
 root.title("Data Entry Form")
 root.resizable(False, False)
 root.configure(bg="#1e3d59")  # Modern mavi tonları
