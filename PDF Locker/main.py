@@ -45,7 +45,7 @@ root = Tk()
 root.title("PDF Protector")
 root.geometry("700x550")
 root.resizable(False, False)
-root.configure(bg="#f0f0f0")  # Arka plan rengi
+root.configure(bg="#f0f0f0") 
 
 frame = Frame(root, width=580, height=290, bd=5, relief=GROOVE, bg="#e6e6e6")
 frame.place(x=10, y=130)
