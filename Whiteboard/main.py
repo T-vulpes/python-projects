@@ -3,14 +3,12 @@ from tkinter import ttk, filedialog, colorchooser
 import os
 from PIL import Image, ImageTk
 
-# Pencere oluşturma
 root = Tk()
 root.title("Whiteboard")
 root.geometry("1050x570+150+50")
 root.config(bg="#f2f3f5")
 root.resizable(False, False)
 
-# Resimleri yükleme (Boyutları ayarlama)
 def resize_image(image_path, width, height):
     img = PhotoImage(file=image_path)
     return img.subsample(max(img.width() // width, 1), max(img.height() // height, 1))
@@ -32,7 +30,6 @@ def add_image():
 import_button = Button(root, image=import_image, bg="white", command=add_image)
 import_button.place(x=30, y=450)
 
-# Renk paleti oluşturma
 colors = Canvas(root, bg="#fff", width=37, height=300, bd=0)
 colors.place(x=30, y=60)
 
@@ -50,11 +47,8 @@ def display_palette():
 
 display_palette()
 
-# Çizim alanı
 canvas = Canvas(root, width=930, height=500, background="white", cursor="hand2")
 canvas.place(x=100, y=10)
-
-# Çizim fonksiyonları
 current_color = "black"
 
 def locate_xy(event):
