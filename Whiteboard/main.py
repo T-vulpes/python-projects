@@ -21,11 +21,11 @@ import_image = resize_image("addimage.png", 40, 40)
 def add_image():
     file_path = filedialog.askopenfilename(filetypes=[("Image Files", "*.png;*.jpg;*.jpeg;*.gif")])
     if file_path:
-        img = Image.open(file_path)  # Resmi aç
-        img = img.resize((200, 200))  # Boyutlandır (Opsiyonel)
-        img = ImageTk.PhotoImage(img)  # Tkinter uyumlu hale getir
+        img = Image.open(file_path)
+        img = img.resize((200, 200)) 
+        img = ImageTk.PhotoImage(img)  
         canvas.create_image(200, 200, image=img, anchor=CENTER)
-        canvas.image = img  # Görüntünün referansını sakla
+        canvas.image = img 
 
 import_button = Button(root, image=import_image, bg="white", command=add_image)
 import_button.place(x=30, y=450)
