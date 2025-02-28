@@ -63,7 +63,6 @@ def add_line(event):
 canvas.bind('<Button-1>', locate_xy)
 canvas.bind('<B1-Motion>', add_line)
 
-# Kalınlık ayarı
 current_value = DoubleVar()
 current_value.set(2)
 
