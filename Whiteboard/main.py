@@ -68,7 +68,6 @@ current_value.set(2)
 
 def get_current_value():
     return f'{current_value.get():.2f}'
-
 def slider_changed(event):
     value_label.config(text=get_current_value())
 
@@ -77,5 +76,4 @@ slider.place(x=30, y=530)
 
 value_label = ttk.Label(root, text=get_current_value())
 value_label.place(x=27, y=550)
-
 root.mainloop()
