@@ -34,11 +34,11 @@ def signup():
 
             messagebox.showinfo('Signup', 'Successfully signed up')
             window.destroy()
-            import login  # Kayıt sonrası login ekranına yönlendirme
+            import login 
 
         except FileNotFoundError:
             with open('datasheet.txt', 'w') as file:
-                file.write(str({username: password}))  # Yeni dosya oluştur ve kullanıcıyı ekle
+                file.write(str({username: password})) 
     else:
         messagebox.showerror('Invalid', 'Both passwords should match!')
 
@@ -95,7 +95,6 @@ Frame(frame, width=295, height=2, bg='black').place(x=25, y=177)
 eye_closed_raw = Image.open("eye.png").resize((25, 25))  
 eye_open_raw = Image.open("eye_open.png").resize((25, 25))
 
-# Tkinter uyumlu hale getir
 eye_closed_img = ImageTk.PhotoImage(eye_closed_raw)
 eye_open_img = ImageTk.PhotoImage(eye_open_raw)
 
@@ -119,7 +118,6 @@ confirm_code.bind("<FocusIn>", on_enter_confirm)
 confirm_code.bind("<FocusOut>", on_leave_confirm)
 
 Frame(frame, width=295, height=2, bg='black').place(x=25, y=247)
-
 Button(frame, width=39, border=0, pady=7, text="Sign Up", bg='#57a1f8', fg='white', command=signup).place(x=35, y=280)
 
 label = Label(frame, text="I have an account", fg="#000", bg="white", font=("Arial", 9))
