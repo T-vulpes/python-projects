@@ -43,12 +43,12 @@ def on_leave_user(event):
 def on_enter_pass(event):
     if code.get() == "Password":
         code.delete(0, 'end')
-        code.config(show="*")  # Şifre girişini gizleme
+        code.config(show="*")  
 
 def on_leave_pass(event):
     if code.get() == '':
         code.insert(0, 'Password')
-        code.config(show="")  # Giriş kutusunu varsayılan hale getirme
+        code.config(show="") 
 
 img = PhotoImage(file="img.png")
 Label(root, image=img, bg="white").place(x=50, y=50)
