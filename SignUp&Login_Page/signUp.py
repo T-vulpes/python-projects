@@ -26,11 +26,11 @@ def signup():
                     r = {}  
 
                 dict2 = {username: password}
-                r.update(dict2)  # Yeni kullanıcıyı ekle
+                r.update(dict2)  
 
                 file.seek(0)
-                file.truncate(0)  # Dosyanın içeriğini temizle
-                file.write(str(r))  # Güncellenmiş veriyi yaz
+                file.truncate(0) 
+                file.write(str(r))  
 
             messagebox.showinfo('Signup', 'Successfully signed up')
             window.destroy()
