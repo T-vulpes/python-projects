@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
-from PIL import Image, ImageTk  # Pillow kütüphanesi ile resimleri küçültmek için
+from PIL import Image, ImageTk  
 import ast
 
 def toggle_password():
@@ -21,9 +21,9 @@ def signup():
             with open('datasheet.txt', 'r+') as file:
                 d = file.read()
                 try:
-                    r = ast.literal_eval(d)  # Dosyayı sözlüğe çevir
+                    r = ast.literal_eval(d)  
                 except:
-                    r = {}  # Eğer dosya bozuksa, boş sözlük olarak başlat
+                    r = {}  
 
                 dict2 = {username: password}
                 r.update(dict2)  # Yeni kullanıcıyı ekle
