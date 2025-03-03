@@ -97,7 +97,7 @@ eye_closed_img = ImageTk.PhotoImage(eye_closed_raw)
 eye_open_img = ImageTk.PhotoImage(eye_open_raw)
 
 eye_button = Button(frame, image=eye_closed_img, border=0, bg="white", command=toggle_password)
-eye_button.place(x=260, y=145)  # Yüksekliği biraz düşürdüm ki hizalama daha iyi olsun
+eye_button.place(x=260, y=145)  
 
 def on_enter_confirm(event):
     if confirm_code.get() == "Confirm Password":
