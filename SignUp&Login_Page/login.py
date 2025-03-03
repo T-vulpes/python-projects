@@ -9,9 +9,9 @@ def signin():
     try:
         with open('datasheet.txt', 'r') as file:
             d = file.read()
-            r = ast.literal_eval(d)  # Dosyayı sözlüğe çevir
+            r = ast.literal_eval(d)  
     except (FileNotFoundError, SyntaxError):
-        r = {}  # Eğer dosya yoksa veya bozuksa, boş sözlük olarak başlat
+        r = {}  
 
     if username in r and r[username] == password:
         screen = Toplevel(root)
