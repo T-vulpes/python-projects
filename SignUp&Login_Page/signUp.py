@@ -91,10 +91,8 @@ code.bind("<FocusOut>", on_leave_pass)
 
 Frame(frame, width=295, height=2, bg='black').place(x=25, y=177)
 
-# Göz resimlerini 25x25 boyutuna küçültme
 eye_closed_raw = Image.open("eye.png").resize((25, 25))  
 eye_open_raw = Image.open("eye_open.png").resize((25, 25))
-
 eye_closed_img = ImageTk.PhotoImage(eye_closed_raw)
 eye_open_img = ImageTk.PhotoImage(eye_open_raw)
 
@@ -125,5 +123,4 @@ label.place(x=75, y=320)
 
 signin = Button(frame, width=6, border=0, text="Sign In", cursor='hand2', fg='#57a1f8', bg='white')
 signin.place(x=215, y=320)
-
 window.mainloop()
