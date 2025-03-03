@@ -24,7 +24,7 @@ def signin():
 
 def open_signup():
     root.destroy()
-    import signUp  # signUp dosyasını çalıştır
+    import signUp  
 
 root = Tk()
 root.title('Login')
