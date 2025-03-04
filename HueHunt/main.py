@@ -31,7 +31,7 @@ def findcolor():
         hex_labels[i].config(text=colors_list[i], fg=colors_list[i])
 
     for i in range(len(colors_list), 10):
-        color_boxes[i].config(bg="#bdc3c7")  # Varsayılan gri tonu
+        color_boxes[i].config(bg="#bdc3c7")  
         hex_labels[i].config(text="#FFFFFF", fg="black")
 
 root = tk.Tk()
@@ -73,5 +73,4 @@ lbl.place(x=0, y=0)
 
 tk.Button(selectimg, text="Select Image", width=12, height=1, font=("Arial", 14), bg="#3498db", fg="white", relief=tk.RAISED, command=showimage).place(x=10, y=300)
 tk.Button(selectimg, text="Find Colors", width=12, height=1, font=("Arial", 14), bg="#2ecc71", fg="white", relief=tk.RAISED, command=findcolor).place(x=176, y=300)
-
 root.mainloop()
