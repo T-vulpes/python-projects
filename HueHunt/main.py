@@ -34,9 +34,8 @@ def findcolor():
         color_boxes[i].config(bg="#bdc3c7")  # Varsayılan gri tonu
         hex_labels[i].config(text="#FFFFFF", fg="black")
 
-
 root = tk.Tk()
-root.title("Color Finder")
+root.title("ColorFinder")
 root.configure(bg="#2c3e50")
 root.geometry("850x500")
 root.resizable(False, False)
@@ -44,7 +43,6 @@ root.resizable(False, False)
 frame = tk.Frame(root, width=750, height=400, bg="#ecf0f1", bd=5, relief=tk.RIDGE)
 frame.place(x=50, y=50)
 
-# Logo
 try:
     logo = ImageTk.PhotoImage(Image.open("color.png").resize((80, 80), Image.Resampling.LANCZOS))
     tk.Label(frame, image=logo, bg="#ecf0f1").place(x=10, y=10)
@@ -52,8 +50,6 @@ except Exception as e:
     print(f"Logo yüklenemedi: {e}")
 
 tk.Label(frame, text="Color Finder", font=("Arial", 20, "bold"), bg="#ecf0f1", fg="#34495e").place(x=100, y=20)
-
-# Renk Kutuları
 color_boxes = []
 hex_labels = []
 
