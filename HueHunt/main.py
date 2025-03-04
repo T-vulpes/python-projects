@@ -47,7 +47,7 @@ try:
     logo = ImageTk.PhotoImage(Image.open("color.png").resize((80, 80), Image.Resampling.LANCZOS))
     tk.Label(frame, image=logo, bg="#ecf0f1").place(x=10, y=10)
 except Exception as e:
-    print(f"Logo yüklenemedi: {e}")
+    print(f"Logo could not be loaded: {e}")
 
 tk.Label(frame, text="Color Finder", font=("Arial", 20, "bold"), bg="#ecf0f1", fg="#34495e").place(x=100, y=20)
 color_boxes = []
