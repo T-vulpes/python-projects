@@ -26,13 +26,10 @@ def findcolor():
     palette = ct.get_palette(color_count=10)
 
     colors_list = [f"#{r:02x}{g:02x}{b:02x}" for r, g, b in palette]
-
-    # Dönen renk sayısını kontrol ederek sadece mevcut renkleri güncelle
     for i in range(len(colors_list)):  
         color_boxes[i].config(bg=colors_list[i])
         hex_labels[i].config(text=colors_list[i], fg=colors_list[i])
 
-    # Eğer bazı renkler eksikse, kalan kutuları varsayılan renge döndür
     for i in range(len(colors_list), 10):
         color_boxes[i].config(bg="#bdc3c7")  # Varsayılan gri tonu
         hex_labels[i].config(text="#FFFFFF", fg="black")
