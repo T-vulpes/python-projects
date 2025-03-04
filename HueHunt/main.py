@@ -62,7 +62,6 @@ for i in range(10):
     label.place(x=30 + (i % 5) * 140, y=150 + (i // 5) * 100)
     hex_labels.append(label)
 
-# Resim Seçme
 selectimg = tk.Frame(frame, width=320, height=360, bg="#d6dee5", relief=tk.GROOVE, bd=3)
 selectimg.place(x=400, y=20)
 
