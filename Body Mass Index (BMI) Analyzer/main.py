@@ -68,7 +68,6 @@ root.resizable(False, False)
 
 frame = Frame(root, bg="#ECF0F1", bd=5, relief=RIDGE)
 frame.pack(pady=20, padx=20, fill=BOTH, expand=True)
-
 Label(frame, text="BMI Calculator", font="Arial 18 bold", bg="#ECF0F1", fg="#2C3E50").pack(pady=10)
 
 Height = StringVar()
@@ -95,5 +94,4 @@ Label(frame, text="BMI History (Last 5 Entries):", font="Arial 12 bold", bg="#EC
 history_list = Listbox(frame, height=5, width=40, font="Arial 10", bg="#ECF0F1", fg="#2C3E50")
 history_list.pack(pady=5)
 history_list.bind("<<ListboxSelect>>", load_selected)
-
 root.mainloop()
