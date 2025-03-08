@@ -1,14 +1,12 @@
 from tkinter import *
 import tkinter as tk
 from tkinter import ttk
-
 bmi_history = []
 
 def BMI():
     try:
         h = float(Height.get())
         w = float(Weight.get())
-        
         if h <= 0 or w <= 0:
             label1.config(text="Invalid Input", fg="#D0021B")
             label2.config(text="Enter valid values", fg="#D0021B")
