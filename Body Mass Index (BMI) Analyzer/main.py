@@ -41,7 +41,7 @@ def BMI():
 
 def update_history():
     history_list.delete(0, END)
-    for entry in bmi_history[-5:]:  # Show last 5 calculations
+    for entry in bmi_history[-5:]:  
         history_list.insert(END, f"Height: {entry[0]} cm, Weight: {entry[1]} kg, BMI: {entry[2]}")
 
 def clear_fields():
