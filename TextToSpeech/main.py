@@ -73,12 +73,10 @@ text_area.place(x=20, y=90, width=460, height=200)
 Label(root, text="Voice", font="Arial 14", bg="#E3E7E8", fg="#30475E").place(x=500, y=90)
 Label(root, text="Speed", font="Arial 14", bg="#E3E7E8", fg="#30475E").place(x=500, y=150)
 
-# Cinsiyet seçimi
 gender_combobox = Combobox(root, values=["Male", "Female"], font="Arial 12", state="readonly", width=10)
 gender_combobox.place(x=500, y=120)
 gender_combobox.set("Female")
 
-# Hız seçimi
 speed_combobox = Combobox(root, values=["Fast", "Normal", "Slow"], font="Arial 12", state="readonly", width=10)
 speed_combobox.place(x=500, y=180)
 speed_combobox.set("Normal")
