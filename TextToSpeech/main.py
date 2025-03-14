@@ -81,11 +81,9 @@ speed_combobox = Combobox(root, values=["Fast", "Normal", "Slow"], font="Arial 1
 speed_combobox.place(x=500, y=180)
 speed_combobox.set("Normal")
 
-# Butonlar (küçültüldü)
 btn = Button(root, text="Speak", width=12, bg="#F0A500", fg="white", font="Arial 12 bold", command=speak)
 btn.place(x=500, y=230)
 
 save = Button(root, text="Download", width=12, bg="#F0A500", fg="white", font="Arial 12 bold", command=download)
 save.place(x=500, y=280)
-
 root.mainloop()
