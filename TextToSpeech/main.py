@@ -59,13 +59,10 @@ def download():
             engine.save_to_file(text, "text.mp3")
             engine.runAndWait()
 
-# Üst çerçeve
 top_frame = Frame(root, bg="#A5C9CA", width=700, height=70)  # Daha soft renk
 top_frame.place(x=0, y=0)
-
 Label(top_frame, text="Text to Speech", font="Arial 18 bold", bg="#A5C9CA", fg="white").place(x=20, y=20)
 
-# Metin kutusu
 text_area = Text(root, font="Arial 14", bg="white", relief=GROOVE, wrap=WORD)
 text_area.place(x=20, y=90, width=460, height=200)
 
