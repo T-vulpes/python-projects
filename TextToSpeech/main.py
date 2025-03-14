@@ -12,7 +12,6 @@ root.resizable(False, False)
 root.configure(bg="#E3E7E8") 
 
 engine = pyttsx3.init()
-
 def speak():
     text = text_area.get(1.0, END).strip()
     gender = gender_combobox.get()
