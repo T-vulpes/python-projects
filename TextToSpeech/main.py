@@ -66,7 +66,6 @@ Label(top_frame, text="Text to Speech", font="Arial 18 bold", bg="#A5C9CA", fg="
 text_area = Text(root, font="Arial 14", bg="white", relief=GROOVE, wrap=WORD)
 text_area.place(x=20, y=90, width=460, height=200)
 
-# Seçenek etiketleri
 Label(root, text="Voice", font="Arial 14", bg="#E3E7E8", fg="#30475E").place(x=500, y=90)
 Label(root, text="Speed", font="Arial 14", bg="#E3E7E8", fg="#30475E").place(x=500, y=150)
 
