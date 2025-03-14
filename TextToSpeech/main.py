@@ -5,12 +5,11 @@ from tkinter.ttk import Combobox
 import pyttsx3
 import os
 
-# Pencere oluşturma
 root = Tk()
 root.title("Text to Speech")
-root.geometry("700x400+200+100")  # Daha kompakt hale getirildi
+root.geometry("700x400+200+100")  
 root.resizable(False, False)
-root.configure(bg="#E3E7E8")  # Daha soft bir arka plan rengi
+root.configure(bg="#E3E7E8") 
 
 engine = pyttsx3.init()
 
