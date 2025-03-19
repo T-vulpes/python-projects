@@ -6,7 +6,7 @@ from datetime import datetime
 import requests
 import pytz
 
-# OpenWeatherMap API Key (Sen buraya kendi API Key'ini yapıştır)
+# OpenWeatherMap API Key 
 API_KEY = "your_api_key"
 
 # Hava durumunu alan fonksiyon
