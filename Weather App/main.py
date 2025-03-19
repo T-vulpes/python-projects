@@ -9,16 +9,13 @@ import pytz
 # OpenWeatherMap API Key 
 API_KEY = "your_api_key"
 
-# Hava durumunu alan fonksiyon
 def get_weather():
     city = city_entry.get()
-    
     if not city:
         messagebox.showerror("Error", "Please enter a city!")
         return
     
     try:
-        # Şehir koordinatlarını al
         geolocator = Nominatim(user_agent="weather_app")
         location = geolocator.geocode(city)
         
