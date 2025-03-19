@@ -37,7 +37,6 @@ def get_weather():
             messagebox.showerror("Error", f"Error: {data.get('message')}")
             return
 
-        # API'den gelen verileri al
         condition = data['weather'][0]['main']
         description = data['weather'][0]['description']
         temp = round(data['main']['temp'])
@@ -45,7 +44,6 @@ def get_weather():
         humidity = data['main']['humidity']
         wind_speed = data['wind']['speed']
 
-        # Verileri arayüze yerleştir
         city_label.config(text=f"Weather in {city.upper()}")
         temp_label.config(text=f"{temp}°C", font=("Arial", 40, "bold"))
         condition_label.config(text=condition, font=("Arial", 18, "bold"), fg="white", bg="#1ab5ef")
@@ -58,14 +56,12 @@ def get_weather():
     except Exception as e:
         messagebox.showerror("Error", f"An error occurred: {e}")
 
-# Tkinter Ana Pencere
 root = tk.Tk()
 root.title("Weather App")
 root.geometry("500x600")
 root.resizable(False, False)
 root.configure(bg="#2c3e50")
 
-# Üst Kısım - Şehir Girişi
 frame = tk.Frame(root, bg="#34495e", pady=10)
 frame.pack(fill="x")
 
