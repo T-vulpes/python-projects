@@ -14,7 +14,6 @@ def get_weather():
     if not city:
         messagebox.showerror("Error", "Please enter a city!")
         return
-    
     try:
         geolocator = Nominatim(user_agent="weather_app")
         location = geolocator.geocode(city)
@@ -23,7 +22,6 @@ def get_weather():
             messagebox.showerror("Error", "City not found. Please try again.")
             return
 
-        # Saat dilimini al
         obj = TimezoneFinder()
         timezone = obj.timezone_at(lng=location.longitude, lat=location.latitude)
 
@@ -31,7 +29,6 @@ def get_weather():
         local_time = datetime.now(home).strftime("%H:%M %p")
         time_label.config(text=f"Local Time: {local_time}")
 
-        # Hava durumu API'sine istek at
         url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
         response = requests.get(url)
         data = response.json()
