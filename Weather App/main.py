@@ -76,7 +76,6 @@ city_entry.focus()
 search_button = tk.Button(frame, text="Search", font=("Arial", 14, "bold"), bg="#1abc9c", fg="white", command=get_weather)
 search_button.pack(side="left", padx=10)
 
-# Orta Kısım - Sonuçlar
 result_frame = tk.Frame(root, bg="#2c3e50")
 result_frame.pack(pady=20)
 
@@ -92,7 +91,6 @@ temp_label.pack(pady=10)
 condition_label = tk.Label(result_frame, font=("Arial", 18), bg="#1ab5ef", fg="white")
 condition_label.pack(fill="x")
 
-# Alt Kısım - Detaylar
 details_frame = tk.Frame(root, bg="#34495e", pady=10)
 details_frame.pack(fill="x", padx=20, pady=10)
 
