@@ -52,7 +52,6 @@ task_entry.pack(side=tk.LEFT, padx=10)
 add_button = tk.Button(frame, text="Ekle", font="Arial 12 bold", bg="#89b4fa", fg="#1e1e2e", command=add_task, padx=10, pady=5, bd=0, activebackground="#74c7ec")
 add_button.pack(side=tk.LEFT)
 
-# Liste kutusu ve kaydırma çubuğu
 frame1 = tk.Frame(root, bg="#1e1e2e")
 frame1.pack(pady=10)
 
@@ -65,7 +64,6 @@ scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 listbox.config(yscrollcommand=scrollbar.set)
 scrollbar.config(command=listbox.yview)
 
-# Silme butonu için resim kullanımı (Boyut daha da küçültüldü)
 delete_icon = PhotoImage(file="delete.png").subsample(6, 6)
 delete_button = tk.Button(root, image=delete_icon, bd=0, command=delete_task, bg="#1e1e2e", activebackground="#1e1e2e")
 delete_button.pack(pady=15)
