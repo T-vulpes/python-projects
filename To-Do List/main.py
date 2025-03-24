@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox, PhotoImage
 
-# Görevleri dosyadan yükleme
 def load_tasks():
     try:
         with open("tasklist.txt", "r") as file:
@@ -13,7 +12,6 @@ def load_tasks():
     except FileNotFoundError:
         open("tasklist.txt", "w").close()
 
-# Yeni görev ekleme
 def add_task():
     task = task_entry.get()
     if task:
@@ -24,7 +22,6 @@ def add_task():
     else:
         messagebox.showwarning("Uyarı", "Lütfen bir görev girin!")
 
-# Seçili görevi silme
 def delete_task():
     try:
         selected_task_index = listbox.curselection()[0]
