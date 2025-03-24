@@ -35,17 +35,14 @@ def delete_task():
     except IndexError:
         messagebox.showwarning("Uyarı", "Lütfen bir görev seçin!")
 
-# Arayüzü oluşturma
 root = tk.Tk()
 root.title("To-Do List")
 root.geometry("450x550")
 root.configure(bg="#1e1e2e")
 
-# Başlık
 heading = tk.Label(root, text="To-Do List", font="Arial 22 bold", fg="#cdd6f4", bg="#1e1e2e")
 heading.pack(pady=15)
 
-# Giriş alanı ve butonlar
 frame = tk.Frame(root, bg="#1e1e2e")
 frame.pack(pady=10)
 
