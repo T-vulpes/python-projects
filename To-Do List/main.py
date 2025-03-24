@@ -20,7 +20,7 @@ def add_task():
             file.write(task + "\n")
         task_entry.delete(0, tk.END)
     else:
-        messagebox.showwarning("Uyarı", "Lütfen bir görev girin!")
+        messagebox.showwarning("Warning", "Please enter a task!")
 
 def delete_task():
     try:
@@ -33,7 +33,7 @@ def delete_task():
                 if index != selected_task_index:
                     file.write(task)
     except IndexError:
-        messagebox.showwarning("Uyarı", "Lütfen bir görev seçin!")
+        messagebox.showwarning("Warning", "Please select a task!")
 
 root = tk.Tk()
 root.title("To-Do List")
