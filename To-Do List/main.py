@@ -73,7 +73,5 @@ delete_icon = PhotoImage(file="delete.png").subsample(6, 6)
 delete_button = tk.Button(root, image=delete_icon, bd=0, command=delete_task, bg="#1e1e2e", activebackground="#1e1e2e")
 delete_button.pack(pady=15)
 
-# Görevleri yükleme
 load_tasks()
-
 root.mainloop()
