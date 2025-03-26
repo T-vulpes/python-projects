@@ -21,21 +21,19 @@ def send_file():
             while file_data:
                 s.send(file_data)
                 file_data = file.read(1024)
-        
         s.close()
         messagebox.showinfo("Success", "File Sent Successfully!")
 
     except Exception as e:
         messagebox.showerror("Error", f"File Sending Failed: {e}")
 
-# **Dosya Alma İşlemi (Sunucu)**
 def receive_file():
     save_path = filedialog.askdirectory(title="Select Save Location")
     if not save_path:
         return
 
-    server_ip = "0.0.0.0"  # Tüm IP'leri dinler
-    server_port = 5000  # Varsayılan port
+    server_ip = "0.0.0.0"  
+    server_port = 5000 
 
     def server_thread():
         try:
