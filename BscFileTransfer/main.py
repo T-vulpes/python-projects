@@ -57,10 +57,8 @@ def receive_file():
 
         except Exception as e:
             messagebox.showerror("Error", f"Receiving Failed: {e}")
-
     threading.Thread(target=server_thread, daemon=True).start()
 
-# **Gönderme Penceresi**
 def send():
     window = Toplevel(root)
     window.title("Send File")
@@ -106,10 +104,8 @@ sendimage = ImageTk.PhotoImage(sendimage)
 receiveimage = Image.open("receive.png").resize((100, 100))
 receiveimage = ImageTk.PhotoImage(receiveimage)
 
-# Butonlar
 send_button = Button(root, image=sendimage, bg="#f4fdfe", bd=0, command=send)
 send_button.place(x=65, y=150)
-
 receive_button = Button(root, image=receiveimage, bg="#f4fdfe", bd=0, command=receive)
 receive_button.place(x=300, y=150)
 
