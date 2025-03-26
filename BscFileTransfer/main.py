@@ -16,8 +16,6 @@ def send_file():
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.connect((target_ip, target_port))
-
-        # Dosya gönderme işlemi
         with open(filename, "rb") as file:
             file_data = file.read(1024)
             while file_data:
