@@ -82,7 +82,6 @@ def send():
     send_button = Button(window, text="Select File & Send", font="arial 12", bg="#57a1f8", fg="white", command=send_file)
     send_button.place(x=120, y=120, width=200, height=40)
 
-# **Alma Penceresi**
 def receive():
     window = Toplevel(root)
     window.title("Receive File")
@@ -93,7 +92,6 @@ def receive():
     receive_button = Button(window, text="Select Folder & Receive", font="arial 12", bg="#57a1f8", fg="white", command=receive_file)
     receive_button.place(x=100, y=70, width=250, height=50)
 
-# **Ana Pencere**
 root = Tk()
 root.title("File Transfer")
 root.geometry("450x560+500+200")
@@ -103,10 +101,8 @@ root.resizable(False, False)
 Label(root, text="FileTransfer", font="arial 15 bold", bg="#f4fdfe").place(x=20, y=30)
 Frame(root, width=400, height=2, bg="#f355f6").place(x=25, y=80)
 
-# Görselleri 100x100 boyutuna getir
 sendimage = Image.open("send.png").resize((100, 100))
 sendimage = ImageTk.PhotoImage(sendimage)
-
 receiveimage = Image.open("receive.png").resize((100, 100))
 receiveimage = ImageTk.PhotoImage(receiveimage)
 
