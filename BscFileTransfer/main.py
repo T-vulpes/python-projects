@@ -5,13 +5,11 @@ import socket
 import os
 import threading
 
-# **Dosya Gönderme İşlemi**
 def send_file():
     filename = filedialog.askopenfilename(title="Select a file")
     if not filename:
         return
 
-    # Hedef IP ve Port
     target_ip = target_ip_entry.get()
     target_port = int(target_port_entry.get())
 
