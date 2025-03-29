@@ -7,11 +7,7 @@ def format_time(seconds_left):
 
 # Pil durumu bilgisini alıyoruz
 battery_info = psutil.sensors_battery()
-
-# Pil yüzdesi
 battery_percentage = battery_info.percent  
-
-# Şarjın ne kadar sürede biteceğini hesaplıyoruz
 remaining_time = format_time(battery_info.secsleft) if battery_info.secsleft != -1 else "Calculating..."  
 
 # Adaptör takılı mı?
