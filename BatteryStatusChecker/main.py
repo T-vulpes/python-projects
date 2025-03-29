@@ -1,7 +1,6 @@
-import psutil  # Pil durumunu kontrol etmek için psutil kütüphanesi kullanılıyor
+import psutil  
 
 def format_time(seconds_left):
-    """Verilen saniye değerini saat:dakika:saniye formatına çevirir."""
     minutes, seconds = divmod(seconds_left, 60)  # Saniyeyi dakikaya çeviriyoruz
     hours, minutes = divmod(minutes, 60)  # Dakikayı saate çeviriyoruz
     return "%d:%02d:%02d" % (hours, minutes, seconds)
