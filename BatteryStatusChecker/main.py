@@ -11,7 +11,6 @@ remaining_time = format_time(battery_info.secsleft) if battery_info.secsleft != 
 
 power_plugged_in = battery_info.power_plugged  
 
-# Sonuçları ekrana yazdırıyoruz
 print("Battery Percentage:", battery_percentage, "%")
 print("Power Plugged In:", power_plugged_in)
 print("Estimated Battery Left:", remaining_time)
