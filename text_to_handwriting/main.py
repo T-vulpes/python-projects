@@ -7,14 +7,12 @@ def text_to_image(text, output_filename="handwriting.png"):
     except:
         font = ImageFont.load_default()
 
-    # Maksimum genişlik belirle
     max_width = 800
     words = text.split()
     
     lines = []
     current_line = ""
 
-    # Metni satır satır böl
     for word in words:
         test_line = current_line + " " + word if current_line else word
         text_bbox = font.getbbox(test_line)  # Yeni yöntem (getsize yerine getbbox)
