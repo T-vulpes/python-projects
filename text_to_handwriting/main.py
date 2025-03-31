@@ -31,13 +31,11 @@ def text_to_image(text, output_filename="handwriting.png"):
     img = Image.new("RGB", (max_width, img_height), (255, 255, 255))
     draw = ImageDraw.Draw(img)
 
-    # Metni resme yaz
     y = 20
     for line in lines:
         draw.text((20, y), line, font=font, fill=(0, 0, 0))
         y += line_height
 
-    # Görüntüyü kaydet
     img.save(output_filename)
     print(f"El yazısı görüntüsü oluşturuldu: {output_filename}")
 
