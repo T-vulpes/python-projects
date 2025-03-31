@@ -36,7 +36,7 @@ def text_to_image(text, output_filename="handwriting.png"):
         y += line_height
 
     img.save(output_filename)
-    print(f"El yazısı görüntüsü oluşturuldu: {output_filename}")
+    print(f"Handwriting image created: {output_filename}")
 
 text = input("Type your text: ")
 text_to_image(text)
