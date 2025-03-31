@@ -2,8 +2,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 def text_to_image(text, output_filename="handwriting.png"):
     try:
-        # Windows'taki el yazısı fontlarından birini kullan
-        font_path = "C:\\Windows\\Fonts\\segoesc.ttf"  # Segoe Script (Windows için)
+        font_path = "C:\\Windows\\Fonts\\segoesc.ttf" 
         font = ImageFont.truetype(font_path, 40)
     except:
         font = ImageFont.load_default()
