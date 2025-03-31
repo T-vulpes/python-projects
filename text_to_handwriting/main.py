@@ -25,12 +25,9 @@ def text_to_image(text, output_filename="handwriting.png"):
             current_line = word
 
     lines.append(current_line)
-
-    # Satır yüksekliği hesapla
     line_height = font.getbbox("A")[3] - font.getbbox("A")[1] + 10  
     img_height = (len(lines) + 1) * line_height + 40  
 
-    # Görüntü oluştur
     img = Image.new("RGB", (max_width, img_height), (255, 255, 255))
     draw = ImageDraw.Draw(img)
 
