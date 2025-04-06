@@ -57,7 +57,6 @@ frame1.pack(pady=10)
 
 listbox = tk.Listbox(frame1, font="Arial 14", width=40, height=12, bg="#313244", fg="#cdd6f4", selectbackground="#89b4fa", bd=0, relief=tk.FLAT, highlightthickness=0)
 listbox.pack(side=tk.LEFT, fill=tk.BOTH, padx=2)
-
 scrollbar = tk.Scrollbar(frame1)
 scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
