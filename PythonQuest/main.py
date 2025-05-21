@@ -90,7 +90,6 @@ def first_mission(lang):
     print(f">>> {encrypted_text_message}: {encrypted_text}")
     
     ask_for_hint(lang, hint)
-    
     user_input = input(f">>> {enter_original_text_message}: ")
     
     if user_input == original_text:
