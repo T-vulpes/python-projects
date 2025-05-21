@@ -202,7 +202,6 @@ print("Çarpım:", result)
 '''
     
     print(f">>> Kod parçası:\n{code_snippet}")
-    
     ask_for_hint(lang, hint)
     
     user_input = input(">>> Hatalı kısmı buldun mu? Doğru kodu yaz: ")
