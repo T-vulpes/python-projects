@@ -13,7 +13,6 @@ toolbar.pack(side=LEFT, fill=Y)
 
 # 📌 
 brush_size = IntVar(value=3)
-
 def update_brush_size(val):
     brush_size.set(int(float(val)))  
 
