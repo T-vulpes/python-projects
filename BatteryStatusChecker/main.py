@@ -1,5 +1,4 @@
 import psutil  
-
 def format_time(seconds_left):
     minutes, seconds = divmod(seconds_left, 60)  
     hours, minutes = divmod(minutes, 60)  
