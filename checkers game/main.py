@@ -314,7 +314,6 @@ class Game:
         text = font.render("Game Over!", True, BLACK)
         self.win.blit(text, (WIDTH // 2 - text.get_width() // 2, HEIGHT // 2 - text.get_height() // 2))
 
-
 def main():
     pygame.init()
     win = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -337,7 +336,6 @@ def main():
                     game.select(row, col)
 
         game.update()
-
 
 if __name__ == "__main__":
     main()
