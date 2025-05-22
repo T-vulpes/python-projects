@@ -11,9 +11,7 @@ BLUE = (0, 0, 255)
 WIDTH, HEIGHT = 500, 500
 ROWS, COLS = 8, 8
 SQUARE_SIZE = WIDTH // COLS
-
 CROWN = pygame.transform.scale(pygame.image.load('crown.png'), (44, 25))
-
 
 class Piece:
     PADDING = 15
