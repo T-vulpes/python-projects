@@ -2,7 +2,6 @@ from collections import Counter
 import string
 
 def clean_text(text):
-    # Convert to lowercase, remove spaces and punctuation
     return ''.join(char for char in text.lower() if char in string.ascii_lowercase)
 
 def is_anagram(text1, text2):
