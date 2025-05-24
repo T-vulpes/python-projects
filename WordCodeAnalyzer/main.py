@@ -28,6 +28,5 @@ def analyze_word(word):
                   f"MORSE: {Fore.RED}{morse_val}{Style.RESET_ALL}")
             time.sleep(0.3)
 
-# Kullanıcıdan giriş al
 word = input("Enter a word: ")
 analyze_word(word)
