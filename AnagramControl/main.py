@@ -14,7 +14,6 @@ def is_anagram(text1, text2):
     else:
         print(f"❌ '{text1}' and '{text2}' are NOT anagrams.")
 
-# Example usage
 is_anagram("Listen!", "Silent")
 is_anagram("The eyes", "They see")
 is_anagram("Hello", "World")
