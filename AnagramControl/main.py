@@ -7,8 +7,6 @@ def clean_text(text):
 def is_anagram(text1, text2):
     cleaned1 = clean_text(text1)
     cleaned2 = clean_text(text2)
-    
-    # Use Counter to compare character frequencies
     result = Counter(cleaned1) == Counter(cleaned2)
     
     if result:
