@@ -45,5 +45,4 @@ def main():
         if command:
             reply = get_chatgpt_response(command)
             speak(reply)
-
 main()
