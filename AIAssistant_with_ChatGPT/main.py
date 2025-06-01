@@ -5,6 +5,7 @@ import os
 from playsound import playsound
 
 openai.api_key = "YOUR_OPENAI_API_KEY"
+
 def speak(text):
     print("Assistant:", text)
     tts = gTTS(text=text, lang='en')
