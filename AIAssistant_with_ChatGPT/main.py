@@ -39,7 +39,7 @@ def listen():
 def main():
     while True:
         command = listen()
-        if command.lower() in ["exit", "quit", "goodbye"]:
+        if command.lower() in ["exit", "quit", "goodbye","adios"]:
             speak("Goodbye, Deniz!")
             break
         if command:
