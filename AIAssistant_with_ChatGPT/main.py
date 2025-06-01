@@ -15,7 +15,7 @@ def speak(text):
 
 def get_chatgpt_response(prompt):
     response = openai.ChatCompletion.create(
-        model="gpt-4",  # or "gpt-3.5-turbo"
+        model="gpt-4",  
         messages=[{"role": "user", "content": prompt}]
     )
     return response["choices"][0]["message"]["content"]
