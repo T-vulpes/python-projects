@@ -69,8 +69,7 @@ class System:
         
         password = input("Enter a password: ")
         email = input("Enter your email address: ")
-        activation_code = str(randint(1000, 9999))
-        
+        activation_code = str(randint(1000, 9999))        
         print("An activation code has been sent to your email address.")
         print("Your activation code:", activation_code)
         
