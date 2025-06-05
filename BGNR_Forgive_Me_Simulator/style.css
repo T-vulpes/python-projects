@@ -1,0 +1,98 @@
+body {
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(to bottom right, #2c3e50, #000);
+  color: #fff;
+  text-align: center;
+  padding-top: 100px;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  animation: fadeIn 1.5s ease-in forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 15px 25px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+  z-index: 10;
+  position: relative;
+}
+
+#yesButton {
+  background-color: #4caf50;
+  color: white;
+}
+
+#noButton {
+  background-color: #e91e63;
+  color: white;
+}
+
+#responseText {
+  margin-top: 50px;
+  font-size: 1.8rem;
+  color: #0f0;
+}
+
+.heart {
+  position: fixed;
+  bottom: 0;
+  animation: floatUp ease-in forwards;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 1;
+}
+
+.warning-text {
+  position: absolute;
+  color: yellow;
+  font-size: 1.3rem;
+  font-weight: bold;
+  animation: fadeText 2s ease-out forwards;
+  pointer-events: none;
+  z-index: 1000;
+  text-shadow: 0 0 5px #000;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeText {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
