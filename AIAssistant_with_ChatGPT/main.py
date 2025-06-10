@@ -4,7 +4,7 @@ import openai
 import os
 from playsound import playsound
 
-openai.api_key = "YOUR_OPENAI_API_KEY"
+openai.api_key = "YOUR_OPENAIAPI_KEY"
 
 def speak(text):
     print("Assistant:", text)
