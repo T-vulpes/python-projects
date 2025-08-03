@@ -5,7 +5,7 @@ import random
 class TicTacToe:
     def __init__(self, root):
         self.root = root
-        self.root.title("Tic Tac Toe - Oyuncu vs Bilgisayar")
+        self.root.title("Tic Tac Toe ")
         self.buttons = [[None for _ in range(3)] for _ in range(3)]
         self.board = [["" for _ in range(3)] for _ in range(3)]
         self.player = "X"
@@ -77,3 +77,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     game = TicTacToe(root)
     root.mainloop()
+
