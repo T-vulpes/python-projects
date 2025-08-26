@@ -28,8 +28,4 @@ for i in range(120):
     t.right(15) 
     h += 1 / 120
 
-# Pencerenin kapanmasını bekle
 turtle.done()
-
-
-
