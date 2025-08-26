@@ -23,15 +23,13 @@ for i in range(120):
     t.circle(i, 60) 
     t.end_fill()
 
-    # Pozisyon ve dönüş
-    t.right(180) # Pozisyonu düzelt
-    t.forward(i) # Merkeze doğru ilerle
-    t.right(15) # Spiral için küçük bir dönüş
-
-    # Renk tonunu artır
+    t.right(180)
+    t.forward(i) 
+    t.right(15) 
     h += 1 / 120
 
 # Pencerenin kapanmasını bekle
 turtle.done()
+
 
 
