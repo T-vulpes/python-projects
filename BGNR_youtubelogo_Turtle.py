@@ -1,13 +1,11 @@
 import turtle
 
-# Ekranı ayarla
 screen = turtle.Screen()
 screen.setup(width=600, height=400)
-screen.bgcolor("#282828") # Koyu arka plan
+screen.bgcolor("#282828") 
 
-# Kaplumbağayı oluştur
 t = turtle.Turtle()
-t.speed(5) # Çizim hızını 5'e ayarladık, böylece adımları görebilirsin.
+t.speed(5)
 t.penup()
 t.hideturtle()
 
@@ -51,3 +49,4 @@ draw_white_triangle()
 
 # Pencerenin kapanmasını bekle
 screen.exitonclick()
+
