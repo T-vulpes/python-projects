@@ -13,18 +13,14 @@ petal_length = 150
 angle_step = 360 / num_petals_per_flower
 h = 0.0
 
-# Ana spiral çizim döngüsü
 for i in range(120):
-    # Renk geçişi için HSV'den RGB'ye dönüşüm
     c = colorsys.hsv_to_rgb(h, 1.0, 1.0)
     t.pencolor(c)
-    
-    # Çiçek yaprağı çizimi
     t.begin_fill()
     t.fillcolor(c)
-    t.circle(i, 60) # İleri doğru dönen yarı daire
+    t.circle(i, 60) 
     t.left(120)
-    t.circle(i, 60) # Geri doğru dönen yarı daire
+    t.circle(i, 60) 
     t.end_fill()
 
     # Pozisyon ve dönüş
@@ -37,4 +33,5 @@ for i in range(120):
 
 # Pencerenin kapanmasını bekle
 turtle.done()
+
 
