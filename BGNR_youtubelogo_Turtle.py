@@ -9,11 +9,10 @@ t.speed(5)
 t.penup()
 t.hideturtle()
 
-# Kırmızı dikdörtgeni çizmek için
 def draw_red_rectangle():
-    t.goto(-150, -80) # Dikdörtgenin sol alt köşesi
+    t.goto(-150, -80) 
     t.pendown()
-    t.color("#FF0000") # YouTube Kırmızısı
+    t.color("#FF0000") 
     t.begin_fill()
 
     # Dikdörtgenin yuvarlak köşelerini çiz
@@ -49,4 +48,5 @@ draw_white_triangle()
 
 # Pencerenin kapanmasını bekle
 screen.exitonclick()
+
 
