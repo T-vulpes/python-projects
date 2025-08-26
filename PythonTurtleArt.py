@@ -1,18 +1,13 @@
 import turtle
 import colorsys
 
-# Ekran ayarları
 s = turtle.Screen()
 s.setup(width=800, height=800)
 s.bgcolor("black")
-
-# Kaplumbağa ayarları
 t = turtle.Turtle()
 t.speed(0)
 t.hideturtle()
 t.pensize(2)
-
-# Çizim parametreleri
 num_petals_per_flower = 18
 petal_length = 150
 angle_step = 360 / num_petals_per_flower
@@ -42,3 +37,4 @@ for i in range(120):
 
 # Pencerenin kapanmasını bekle
 turtle.done()
+
