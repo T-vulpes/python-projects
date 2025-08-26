@@ -15,7 +15,6 @@ def draw_red_rectangle():
     t.color("#FF0000") 
     t.begin_fill()
 
-    # Dikdörtgenin yuvarlak köşelerini çiz
     radius = 20
     length = 300
     width = 160
@@ -43,7 +42,3 @@ def draw_white_triangle():
 draw_red_rectangle()
 draw_white_triangle()
 screen.exitonclick()
-
-
-
-
