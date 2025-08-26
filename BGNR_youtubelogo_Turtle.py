@@ -29,16 +29,14 @@ def draw_red_rectangle():
     t.end_fill()
     t.penup()
 
-# Beyaz üçgeni (oynatma simgesini) çizmek için
 def draw_white_triangle():
-    # Üçgenin merkezini daha yukarı almak için y koordinatlarını artırıyoruz.
-    t.goto(-40, -35) # Üçgenin sol köşesi (y değerini 10 artırdık)
+    t.goto(-40, -35) 
     t.pendown()
     t.color("white")
     t.begin_fill()
-    t.goto(60, 10)   # Üçgenin sağ köşesi (y değerini 10 artırdık)
-    t.goto(-40, 55)  # Üçgenin üst köşesi (y değerini 10 artırdık)
-    t.goto(-40, -35) # Üçgenin başlangıç noktasına geri dön
+    t.goto(60, 10)  
+    t.goto(-40, 55)  
+    t.goto(-40, -35) 
     t.end_fill()
     t.penup()
 
@@ -48,5 +46,6 @@ draw_white_triangle()
 
 # Pencerenin kapanmasını bekle
 screen.exitonclick()
+
 
 
