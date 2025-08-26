@@ -40,12 +40,10 @@ def draw_white_triangle():
     t.end_fill()
     t.penup()
 
-# Logoyu çizmeye başla
 draw_red_rectangle()
 draw_white_triangle()
-
-# Pencerenin kapanmasını bekle
 screen.exitonclick()
+
 
 
 
