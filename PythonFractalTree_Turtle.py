@@ -52,8 +52,3 @@ t.pensize(25) # Daha da kalın çizgi
 t.forward(900)
 
 turtle.done()
-
-
-
-
-
