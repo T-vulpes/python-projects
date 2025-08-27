@@ -34,13 +34,9 @@ def draw_fast_dense_tree(branch_length, pen_size):
     t.right(28) 
     draw_fast_dense_tree(branch_length * 0.72, pen_size * 0.7)
     t.left(28)
-
-    # Sola dal
     t.left(28) 
     draw_fast_dense_tree(branch_length * 0.72, pen_size * 0.7)
     t.right(28)
-
-    # Ekstra, daha küçük bir dal
     t.right(5)
     draw_fast_dense_tree(branch_length * 0.6, pen_size * 0.6)
     t.left(5)
@@ -58,6 +54,7 @@ t.pensize(25) # Daha da kalın çizgi
 t.forward(900)
 
 turtle.done()
+
 
 
 
