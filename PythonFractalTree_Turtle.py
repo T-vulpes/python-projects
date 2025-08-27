@@ -45,10 +45,11 @@ def draw_fast_dense_tree(branch_length, pen_size):
 draw_fast_dense_tree(130, 8)
 
 t.penup()
-t.goto(-450, -400) # Ağaçla aynı hizada başla
+t.goto(-450, -400) 
 t.pendown()
 t.color("#556B2F")
-t.pensize(25) # Daha da kalın çizgi
+t.pensize(25) 
 t.forward(900)
 
 turtle.done()
+
