@@ -18,7 +18,6 @@ t.forward(120)
 
 def draw_fast_dense_tree(branch_length, pen_size):
     if branch_length < 15:
-        # Daha fazla çiçek rengi ekledik
         flower_colors = ["#FF69B4", "#DA70D6", "#FFC0CB", "#FF1493", "#FFA07A", "#C71585"]
         t.dot(random.randint(6, 10), random.choice(flower_colors))
         return
@@ -32,8 +31,6 @@ def draw_fast_dense_tree(branch_length, pen_size):
         t.color("#006400")
         
     t.forward(branch_length)
-
-    # Sağa dal
     t.right(28) 
     draw_fast_dense_tree(branch_length * 0.72, pen_size * 0.7)
     t.left(28)
@@ -61,5 +58,6 @@ t.pensize(25) # Daha da kalın çizgi
 t.forward(900)
 
 turtle.done()
+
 
 
