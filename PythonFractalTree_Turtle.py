@@ -4,13 +4,12 @@ import random
 t = turtle.Turtle()
 s = turtle.Screen()
 s.setup(width=900, height=900)
-s.bgcolor("#B0E0E6") # Daha açık ve hoş bir mavi tonu
-t.speed(0) # En hızlı çizim hızı
+s.bgcolor("#B0E0E6")
+t.speed(0) 
 
-# Başlangıç noktası
 t.penup()
 t.left(90)
-t.goto(0, -400) # Ağacın daha aşağıda başlaması için Y koordinatını azalttık
+t.goto(0, -400) 
 t.pendown()
 
 t.color("#8B4513")
@@ -64,3 +63,4 @@ t.pensize(25) # Daha da kalın çizgi
 t.forward(900)
 
 turtle.done()
+
