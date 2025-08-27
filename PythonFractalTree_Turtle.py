@@ -13,9 +13,7 @@ t.goto(0, -400)
 t.pendown()
 
 t.color("#8B4513")
-t.pensize(10) # Başlangıç gövdesi için daha kalın çizgi
-
-# Ağaç gövdesini çiz
+t.pensize(10) 
 t.forward(120)
 
 def draw_fast_dense_tree(branch_length, pen_size):
@@ -63,4 +61,5 @@ t.pensize(25) # Daha da kalın çizgi
 t.forward(900)
 
 turtle.done()
+
 
