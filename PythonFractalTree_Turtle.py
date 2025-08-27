@@ -40,12 +40,10 @@ def draw_fast_dense_tree(branch_length, pen_size):
     t.right(5)
     draw_fast_dense_tree(branch_length * 0.6, pen_size * 0.6)
     t.left(5)
-
     t.backward(branch_length)
 
 draw_fast_dense_tree(130, 8)
 
-# Toprak çizimi
 t.penup()
 t.goto(-450, -400) # Ağaçla aynı hizada başla
 t.pendown()
@@ -54,6 +52,7 @@ t.pensize(25) # Daha da kalın çizgi
 t.forward(900)
 
 turtle.done()
+
 
 
 
